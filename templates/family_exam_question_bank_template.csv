@@ -1,0 +1,4 @@
+question_text,testament_type,chapter_number,difficulty,feedback_correct,feedback_wrong,status,option_1,option_2,option_3,option_4,correct_index
+من شق البحر بعصاه؟,old,14,easy,صحيح,راجع سفر الخروج,active,موسى,هرون,يشوع,داود,1
+من هو التلميذ الذي أنكر المسيح ثلاث مرات؟,new,18,medium,أحسنت,راجع القصة,active,بطرس,يوحنا,توما,يعقوب,1
+في أي مزمور عبارة الرب راعي فلا يعوزني شيء؟,old,23,medium,ممتاز,راجع المزامير,active,23,91,1,51,1

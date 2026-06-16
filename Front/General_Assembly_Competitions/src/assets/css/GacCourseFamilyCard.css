@@ -1,0 +1,311 @@
+/* GA family catalog — lecture/course cards (hero + panel + CTA), matches LMS reference layout */
+
+.gac-course-family-card {
+  border-radius: 18px;
+  overflow: hidden;
+  background: #fffdf8;
+  border: 1px solid rgba(201, 166, 70, 0.28);
+  box-shadow: 0 12px 36px rgba(15, 13, 11, 0.08);
+  transition: box-shadow 0.25s ease, transform 0.2s ease;
+}
+
+.gac-course-family-card:hover {
+  box-shadow: 0 18px 48px rgba(15, 13, 11, 0.12);
+}
+
+/* —— Hero: gradient strip + duration (lecture "bare" has no play icon to avoid duplicate controls) —— */
+.gac-course-family-card__hero {
+  position: relative;
+  min-height: 140px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.25rem 1rem;
+}
+
+/* Lecture: shorter decorative band only */
+.gac-course-family-card__hero--bare {
+  min-height: 88px;
+  padding: 0.75rem 1rem;
+}
+
+.gac-course-family-card__hero--video {
+  background: linear-gradient(155deg, #6b2224 0%, #3a1214 55%, #2a0c0e 100%);
+}
+
+.gac-course-family-card__hero--audio {
+  background: linear-gradient(155deg, #1f4a47 0%, #14302e 55%, #0c1f1e 100%);
+}
+
+.gac-course-family-card__hero--course {
+  background: linear-gradient(155deg, #5c4a2a 0%, #3d3220 55%, #2a2214 100%);
+}
+
+.gac-course-family-card__hero-inner {
+  width: 88px;
+  height: 88px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(145deg, #e4c86d 0%, #c9a646 45%, #a8832e 100%);
+  color: #fffdf8;
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.35);
+  border: 2px solid rgba(255, 253, 248, 0.35);
+}
+
+.gac-course-family-card__hero-inner--compact {
+  width: 64px;
+  height: 64px;
+}
+
+.gac-course-family-card__hero-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.gac-course-family-card__hero-icon--course {
+  color: #fffdf8;
+}
+
+.gac-course-family-card__duration-badge {
+  position: absolute;
+  inset-inline-start: 12px;
+  bottom: 12px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  border-radius: 999px;
+  font-size: 0.78rem;
+  font-weight: 800;
+  color: #fffdf8;
+  background: rgba(10, 8, 8, 0.88);
+  border: 1px solid rgba(255, 253, 248, 0.12);
+  max-width: calc(100% - 24px);
+}
+
+.gac-course-family-card__duration-icon {
+  font-size: 0.85rem;
+  opacity: 0.95;
+}
+
+/* —— Panel (title + tags aligned on one row in RTL) —— */
+.gac-course-family-card__panel {
+  padding: 0.85rem 1.1rem 1rem;
+  text-align: right;
+}
+
+.gac-course-family-card__panel-head {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 10px 14px;
+  margin-bottom: 0.45rem;
+}
+
+.gac-course-family-card__panel-head .gac-course-family-card__title {
+  flex: 1;
+  min-width: 0;
+  margin-bottom: 0;
+}
+
+.gac-course-family-card__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: flex-end;
+  flex-shrink: 0;
+  margin-bottom: 0;
+}
+
+.gac-course-family-card__tag {
+  font-size: 0.72rem;
+  font-weight: 800;
+  padding: 0.28rem 0.65rem;
+  border-radius: 999px;
+}
+
+.gac-course-family-card__tag--gold {
+  color: #4a3d1f;
+  background: rgba(201, 166, 70, 0.35);
+  border: 1px solid rgba(201, 166, 70, 0.45);
+}
+
+.gac-course-family-card__tag--sky {
+  color: #143d52;
+  background: rgba(135, 206, 235, 0.35);
+  border: 1px solid rgba(70, 130, 180, 0.35);
+}
+
+.gac-course-family-card__tag--coral {
+  color: #5c1f24;
+  background: rgba(232, 168, 168, 0.45);
+  border: 1px solid rgba(180, 90, 90, 0.35);
+}
+
+.gac-course-family-card__tag--muted {
+  color: #5d5a52;
+  background: rgba(15, 13, 11, 0.06);
+  border: 1px solid rgba(15, 13, 11, 0.1);
+}
+
+.gac-course-family-card__title {
+  margin: 0 0 0.5rem;
+  font-size: 1.22rem;
+  font-weight: 800;
+  color: #0f0d0b;
+  line-height: 1.35;
+}
+
+.gac-course-family-card__panel-head .gac-course-family-card__title {
+  margin: 0;
+  padding-top: 2px;
+}
+
+.gac-course-family-card__summary {
+  margin: 0 0 0.55rem;
+  font-size: 0.92rem;
+  line-height: 1.55;
+  color: rgba(15, 13, 11, 0.78);
+}
+
+.gac-course-family-card__summary--clamp {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.gac-course-family-card__cta-full {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  margin-top: 0.5rem;
+  padding: 0.72rem 1rem;
+  border-radius: 14px;
+  border: 1px solid rgba(201, 166, 70, 0.55);
+  font-size: 0.92rem;
+  font-weight: 800;
+  text-decoration: none;
+  cursor: pointer;
+  font-family: inherit;
+  color: #4a3d1f;
+  background: linear-gradient(180deg, #f0e4c4 0%, #e4cf8a 45%, #d4b85c 100%);
+  box-shadow: 0 6px 20px rgba(201, 166, 70, 0.28);
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+
+.gac-course-family-card__cta-full:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 10px 26px rgba(201, 166, 70, 0.38);
+}
+
+.gac-course-family-card__cta-ghost {
+  display: inline-flex;
+  margin-top: 0.45rem;
+  font-size: 0.84rem;
+  font-weight: 700;
+  color: #6b5428;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.gac-course-family-card__cta-ghost:hover {
+  color: #4a3d1f;
+}
+
+/* —— Embedded player (shown after one explicit tap — single play path) —— */
+.gac-course-family-card__player-label {
+  margin: 0 0 0.4rem;
+  font-size: 0.78rem;
+  font-weight: 800;
+  color: rgba(15, 13, 11, 0.45);
+  letter-spacing: 0.02em;
+}
+
+.gac-course-family-card__player-block {
+  margin-top: 0.65rem;
+}
+
+.gac-course-family-card__media {
+  border-radius: 14px;
+  overflow: hidden;
+  border: 1px solid rgba(201, 166, 70, 0.38);
+  background: #0a0808;
+}
+
+.gac-course-family-card__media--audio {
+  background: rgba(245, 242, 231, 0.98);
+  padding: 0.65rem 0.75rem;
+}
+
+.gac-course-family-card__media--fallback {
+  background: transparent;
+  border: none;
+  padding: 0.35rem 0;
+}
+
+.gac-course-family-card__iframe-wrap {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%;
+  height: 0;
+  background: #000;
+}
+
+.gac-course-family-card__iframe-wrap iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.gac-course-family-card__video {
+  display: block;
+  width: 100%;
+  max-height: min(52vh, 320px);
+  vertical-align: middle;
+  background: #000;
+}
+
+.gac-course-family-card__audio {
+  display: block;
+  width: 100%;
+}
+
+.gac-course-family-card__link-inline {
+  display: inline-block;
+  padding: 0.5rem 0.85rem;
+  font-weight: 700;
+  color: #c9a646;
+}
+
+@media (max-width: 640px) {
+  .gac-course-family-card__hero {
+    min-height: 120px;
+  }
+
+  .gac-course-family-card__hero--bare {
+    min-height: 76px;
+  }
+
+  .gac-course-family-card__hero-inner {
+    width: 76px;
+    height: 76px;
+  }
+
+  .gac-course-family-card__panel-head {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .gac-course-family-card__tags {
+    justify-content: flex-end;
+  }
+}

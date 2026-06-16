@@ -1,0 +1,45 @@
+.gac-home-hero {
+  padding: 1.35rem 1.1rem;
+  border-radius: 22px;
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.96) 0%, rgba(255, 236, 210, 0.5) 42%, rgba(234, 239, 219, 0.98) 100%);
+  border: 1px solid rgba(201, 120, 55, 0.4);
+  box-shadow: 0 14px 40px rgba(144, 40, 33, 0.1);
+}
+
+.gac-home-hero__eyebrow {
+  margin: 0 0 0.5rem;
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: #902821;
+  letter-spacing: 0.02em;
+}
+
+.gac-home-hero__title {
+  margin: 0 0 0.65rem;
+  font-size: clamp(1.35rem, 3.2vw, 2rem);
+  font-weight: 800;
+  color: #0a0808;
+  line-height: 1.35;
+  letter-spacing: -0.02em;
+}
+
+.gac-home-hero__lead {
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.65;
+  color: rgba(144, 40, 33, 0.78);
+  max-width: 38rem;
+}
+
+@media (max-width: 640px) {
+  .gac-home-hero {
+    padding: 1.1rem 0.9rem;
+    border-radius: 18px;
+  }
+}
+
+@media (max-width: 380px) {
+  .gac-home-hero {
+    padding: 1rem 0.75rem;
+  }
+}

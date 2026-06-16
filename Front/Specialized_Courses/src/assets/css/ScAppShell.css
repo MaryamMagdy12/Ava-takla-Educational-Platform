@@ -1,0 +1,31 @@
+/* App shell: layout pattern aligned with main student portal (`#pg-layout-shell` + `#pg-layout-main`). */
+.sc-app-shell {
+  margin: 0 auto;
+  padding: 1.1rem;
+  min-height: 100vh;
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  color: #0a0808;
+  background-image: url('../images/ChatGPT Image Apr 17, 2026, 02_04_33 AM.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.sc-app-shell__nav-wrap {
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  padding: 0;
+}
+
+.sc-app-shell__main {
+  flex: 1 1 auto;
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  margin-top: 1rem;
+  padding: 0;
+  min-height: 0;
+}

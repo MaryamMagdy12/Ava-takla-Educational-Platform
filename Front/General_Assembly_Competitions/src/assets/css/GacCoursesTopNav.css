@@ -1,0 +1,55 @@
+.gac-courses-top-nav {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem 0.75rem;
+  margin-bottom: 1.25rem;
+  padding: 0.55rem 0.65rem;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.88);
+  border: 1px solid rgba(201, 120, 55, 0.28);
+  box-shadow: 0 6px 22px rgba(144, 40, 33, 0.06);
+}
+
+.gac-courses-top-nav__brand,
+.gac-courses-top-nav__link {
+  font-weight: 700;
+  font-size: 0.9rem;
+  text-decoration: none;
+  color: #902821;
+  padding: 0.35rem 0.65rem;
+  border-radius: 999px;
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+.gac-courses-top-nav__brand:hover,
+.gac-courses-top-nav__link:hover {
+  background: rgba(201, 120, 55, 0.14);
+  transform: translateY(-1px);
+}
+
+.gac-courses-top-nav__brand--active,
+.gac-courses-top-nav__link--active {
+  background: linear-gradient(120deg, rgba(144, 40, 33, 0.12), rgba(201, 120, 55, 0.2));
+  border: 1px solid rgba(201, 120, 55, 0.35);
+}
+
+@media (max-width: 560px) {
+  .gac-courses-top-nav {
+    flex-direction: column;
+    align-items: stretch;
+    padding: 0.5rem 0.55rem;
+  }
+
+  .gac-courses-top-nav__brand,
+  .gac-courses-top-nav__link {
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    box-sizing: border-box;
+  }
+}

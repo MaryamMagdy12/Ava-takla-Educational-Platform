@@ -1,0 +1,21 @@
+#pg-layout-shell {
+  margin: 0 auto;
+  padding: 1.1rem;
+  min-height: 100vh;
+  color: #0a0808;
+  /* font-family: 'Cairo', sans-serif;
+  background:
+    radial-gradient(ellipse 120% 80% at 0% 0%, rgba(201, 120, 55, 0.22), transparent 55%),
+    radial-gradient(ellipse 100% 70% at 100% 100%, rgba(144, 40, 33, 0.14), transparent 50%),
+    radial-gradient(circle at 50% 30%, rgba(255, 255, 255, 0.5), transparent 55%),
+    linear-gradient(168deg, #eaefdb 0%, #f5f7ea 45%, #eaefdb 100%); */
+    background-image: url("../../assets/images/ChatGPT Image Apr 17, 2026, 03_14_57 AM.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+#pg-layout-main {
+  margin-top: 1rem;
+}

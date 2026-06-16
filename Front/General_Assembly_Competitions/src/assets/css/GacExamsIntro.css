@@ -1,0 +1,24 @@
+.gac-exams-intro {
+  margin-bottom: 1.25rem;
+}
+
+.gac-exams-intro__title {
+  margin: 0 0 0.45rem;
+  font-size: clamp(1.35rem, 2.8vw, 1.8rem);
+  font-weight: 800;
+  color: #0a0808;
+}
+
+.gac-exams-intro__text {
+  margin: 0;
+  max-width: 42rem;
+  line-height: 1.65;
+  color: rgba(10, 8, 8, 0.78);
+  font-size: 0.96rem;
+}
+
+@media (max-width: 480px) {
+  .gac-exams-intro__text {
+    font-size: 0.9rem;
+  }
+}

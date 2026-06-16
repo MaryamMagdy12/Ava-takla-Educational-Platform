@@ -1,0 +1,38 @@
+.gac-toast-root {
+  position: fixed;
+  inset-inline-end: 16px;
+  top: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  z-index: 9999;
+  pointer-events: none;
+}
+
+.gac-toast-item {
+  max-width: min(92vw, 420px);
+  padding: 12px 14px;
+  border-radius: 12px;
+  color: #fff;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  background: #334155;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.gac-toast-item--success {
+  background: #166534;
+}
+
+.gac-toast-item--error {
+  background: #991b1b;
+}
+
+.gac-toast-item--info {
+  background: #1e3a8a;
+}
+
+.gac-toast-item-message {
+  font-size: 14px;
+  line-height: 1.45;
+  word-break: break-word;
+}

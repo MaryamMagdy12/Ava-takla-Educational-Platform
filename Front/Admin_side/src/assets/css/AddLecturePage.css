@@ -1,0 +1,147 @@
+/* Add lecture: upload overlay + spinner; forms from admin-theme */
+
+#pg-lecture-new-page-root .pg-lecture-new-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+#pg-lecture-new-page-root .pg-lecture-new-form-shell {
+  position: relative;
+  margin-top: 16px;
+  max-width: min(960px, 100%);
+  margin-inline: auto;
+}
+
+#pg-lecture-new-page-root .pg-lecture-new-loading-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  border-radius: 18px;
+  background: rgba(255, 253, 248, 0.82);
+  backdrop-filter: blur(3px);
+  pointer-events: all;
+}
+
+#pg-lecture-new-page-root .pg-lecture-new-spinner {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 3px solid rgba(201, 166, 70, 0.25);
+  border-top-color: #c9a646;
+  border-right-color: #7a1f1f;
+  animation: pg-lecture-new-spin 0.75s linear infinite;
+}
+
+@keyframes pg-lecture-new-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+#pg-lecture-new-page-root .pg-lecture-new-loading-text {
+  font-weight: 700;
+  color: #7a1f1f;
+  font-size: 1rem;
+  text-align: center;
+  line-height: 1.4;
+}
+
+#pg-lecture-new-page-root .pg-lecture-new-progress-wrap {
+  width: min(300px, 88%);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: stretch;
+}
+
+#pg-lecture-new-page-root .pg-lecture-new-cancel-upload {
+  align-self: center;
+  margin-top: 4px;
+  min-height: 44px;
+  padding: 10px 24px;
+  border-radius: 999px;
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+  color: #5d1717;
+  background: rgba(255, 253, 248, 0.9);
+  border: 2px solid rgba(93, 23, 23, 0.45);
+  transition: background 0.15s ease, border-color 0.15s ease, transform 0.15s ease;
+}
+
+#pg-lecture-new-page-root .pg-lecture-new-cancel-upload:hover {
+  background: rgba(93, 23, 23, 0.1);
+  border-color: #5d1717;
+}
+
+#pg-lecture-new-page-root .pg-lecture-new-cancel-upload:active {
+  transform: scale(0.98);
+}
+
+#pg-lecture-new-page-root .pg-lecture-new-progress-track {
+  height: 12px;
+  border-radius: 999px;
+  background: rgba(201, 166, 70, 0.2);
+  overflow: hidden;
+}
+
+#pg-lecture-new-page-root .pg-lecture-new-progress-fill {
+  height: 100%;
+  min-width: 0;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #c9a646, #e4c86d);
+  transition: width 0.15s ease-out;
+}
+
+#pg-lecture-new-page-root .pg-lecture-new-progress-track--indeterminate .pg-lecture-new-progress-fill {
+  width: 38%;
+  animation: pg-lecture-new-progress-slide 1.1s ease-in-out infinite;
+}
+
+@keyframes pg-lecture-new-progress-slide {
+  0% {
+    transform: translateX(-30%);
+  }
+  100% {
+    transform: translateX(280%);
+  }
+}
+
+#pg-lecture-new-page-root .pg-lecture-new-form-card-heading {
+  margin: 0 0 18px;
+  color: #0f0d0b;
+  font-size: 1.1rem;
+  font-weight: 800;
+}
+
+#pg-lecture-new-page-root .pg-lecture-new-form-card-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  column-gap: 20px;
+  row-gap: 18px;
+}
+
+#pg-lecture-new-page-root .pg-lecture-new-form-card-actions {
+  margin-top: 20px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+#pg-lecture-new-page-root .pg-lecture-new-form-card-submit:disabled {
+  opacity: 0.75;
+  cursor: not-allowed;
+}
+
+@media (max-width: 900px) {
+  #pg-lecture-new-page-root .pg-lecture-new-form-card-grid {
+    grid-template-columns: 1fr;
+  }
+}

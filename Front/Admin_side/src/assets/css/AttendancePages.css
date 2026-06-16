@@ -1,0 +1,447 @@
+/* Attendance take + reports (Deacons student admin) */
+
+#pg-attendance-take-page-root .pg-attendance-take-level-tabs,
+#pg-attendance-reports-page-root .pg-attendance-reports-main-tabs,
+#pg-attendance-reports-page-root .pg-attendance-reports-points-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 14px;
+}
+
+#pg-attendance-take-page-root .pg-attendance-take-level-tab,
+#pg-attendance-reports-page-root .pg-attendance-reports-tab {
+  border: 1px solid var(--adm-border, rgba(201, 166, 70, 0.22));
+  background: var(--adm-surface, #fffdf8);
+  padding: 8px 16px;
+  border-radius: 999px;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 0.88rem;
+  color: var(--adm-ink, #0f0d0b);
+  font-family: inherit;
+  transition:
+    background 0.18s ease,
+    border-color 0.18s ease,
+    transform 0.15s ease;
+}
+
+#pg-attendance-take-page-root .pg-attendance-take-level-tab:hover,
+#pg-attendance-reports-page-root .pg-attendance-reports-tab:hover {
+  border-color: rgba(201, 166, 70, 0.55);
+  background: rgba(255, 253, 248, 0.98);
+}
+
+#pg-attendance-take-page-root .pg-attendance-take-level-tab:focus-visible,
+#pg-attendance-reports-page-root .pg-attendance-reports-tab:focus-visible {
+  outline: 2px solid var(--adm-brand, #c9a646);
+  outline-offset: 2px;
+}
+
+#pg-attendance-take-page-root .pg-attendance-take-level-tab--active,
+#pg-attendance-reports-page-root .pg-attendance-reports-tab--active {
+  background: var(--adm-btn-primary-bg, #c9a646);
+  border-color: var(--adm-brand-strong, #c9a646);
+  color: var(--adm-btn-primary-ink, #0f0d0b);
+}
+
+#pg-attendance-take-page-root .pg-attendance-take-toolbar,
+#pg-attendance-reports-page-root .pg-attendance-reports-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  gap: 14px;
+  margin-bottom: 16px;
+}
+
+#pg-attendance-take-page-root .pg-attendance-take-field,
+#pg-attendance-reports-page-root .pg-attendance-reports-field {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  min-width: 160px;
+}
+
+#pg-attendance-take-page-root .pg-attendance-take-field label,
+#pg-attendance-reports-page-root .pg-attendance-reports-field label {
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: #5d5a52;
+}
+
+#pg-attendance-take-page-root .pg-attendance-take-field input,
+#pg-attendance-reports-page-root .pg-attendance-reports-field input,
+#pg-attendance-reports-page-root .pg-attendance-reports-field select {
+  padding: 10px 12px;
+  border-radius: 12px;
+  border: 1px solid var(--adm-border);
+  background: var(--adm-surface);
+  font-family: inherit;
+  font-size: 0.92rem;
+}
+
+#pg-attendance-take-page-root .pg-attendance-take-search {
+  flex: 1;
+  min-width: 200px;
+}
+
+#pg-attendance-take-page-root .pg-attendance-take-table-wrap,
+#pg-attendance-reports-page-root .pg-attendance-reports-table-wrap {
+  overflow: auto;
+  border: 1px solid var(--adm-border);
+  border-radius: 16px;
+  background: var(--adm-surface);
+}
+
+#pg-attendance-take-page-root .pg-attendance-take-table,
+#pg-attendance-reports-page-root .pg-attendance-reports-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 520px;
+}
+
+#pg-attendance-take-page-root .pg-attendance-take-table th,
+#pg-attendance-take-page-root .pg-attendance-take-table td,
+#pg-attendance-reports-page-root .pg-attendance-reports-table th,
+#pg-attendance-reports-page-root .pg-attendance-reports-table td {
+  padding: 10px 12px;
+  border-bottom: 1px solid var(--adm-border);
+  text-align: start;
+}
+
+#pg-attendance-take-page-root .pg-attendance-take-table th,
+#pg-attendance-reports-page-root .pg-attendance-reports-table th {
+  font-size: 0.78rem;
+  color: #5d5a52;
+  font-weight: 800;
+  background: rgba(201, 166, 70, 0.08);
+}
+
+#pg-attendance-take-page-root .pg-attendance-take-table .pg-attendance-take-col-check,
+#pg-attendance-reports-page-root .pg-attendance-reports-table .pg-attendance-take-col-check {
+  width: 52px;
+  text-align: center;
+}
+
+#pg-attendance-take-page-root .pg-attendance-take-mono,
+#pg-attendance-reports-page-root .pg-attendance-reports-mono {
+  font-variant-numeric: tabular-nums;
+  direction: ltr;
+  display: inline-block;
+}
+
+#pg-attendance-take-page-root .pg-attendance-take-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+  margin-top: 16px;
+}
+
+#pg-attendance-reports-page-root .pg-attendance-reports-split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  margin-top: 12px;
+}
+
+@media (max-width: 900px) {
+  #pg-attendance-reports-page-root .pg-attendance-reports-split {
+    grid-template-columns: 1fr;
+  }
+}
+
+#pg-attendance-reports-page-root .pg-attendance-reports-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.2fr);
+  gap: 16px;
+}
+
+@media (max-width: 960px) {
+  #pg-attendance-reports-page-root .pg-attendance-reports-layout {
+    grid-template-columns: 1fr;
+  }
+}
+
+#pg-attendance-reports-page-root .pg-attendance-reports-panel-title {
+  margin: 0 0 10px;
+  font-size: 1rem;
+  font-weight: 800;
+  color: var(--adm-ink);
+}
+
+#pg-attendance-reports-page-root .pg-attendance-reports-session-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 12px 14px;
+  border: 1px solid var(--adm-border);
+  border-radius: 14px;
+  margin-bottom: 8px;
+  cursor: pointer;
+  background: var(--adm-surface);
+  text-align: start;
+  width: 100%;
+  font-family: inherit;
+  color: inherit;
+  transition:
+    border-color 0.18s ease,
+    background 0.18s ease,
+    box-shadow 0.18s ease;
+}
+
+#pg-attendance-reports-page-root .pg-attendance-reports-session-row:hover {
+  border-color: rgba(201, 166, 70, 0.5);
+  background: rgba(255, 253, 248, 0.95);
+}
+
+#pg-attendance-reports-page-root .pg-attendance-reports-session-row:focus-visible {
+  outline: 2px solid var(--adm-brand, #c9a646);
+  outline-offset: 2px;
+}
+
+#pg-attendance-reports-page-root .pg-attendance-reports-session-row--active {
+  border-color: var(--adm-brand, #c9a646);
+  background: linear-gradient(135deg, rgba(201, 166, 70, 0.14) 0%, rgba(255, 253, 248, 0.98) 48%, var(--adm-surface) 100%);
+  box-shadow: 0 0 0 1px rgba(201, 166, 70, 0.28);
+}
+
+#pg-attendance-reports-page-root .pg-attendance-reports-session-title {
+  font-weight: 800;
+  color: var(--adm-ink, #0f0d0b);
+}
+
+#pg-attendance-reports-page-root .pg-attendance-reports-session-date {
+  font-weight: 700;
+  color: #4a463d;
+}
+
+#pg-attendance-reports-page-root .pg-attendance-reports-session-stats {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #5d5a52;
+}
+
+#pg-attendance-reports-page-root .pg-attendance-reports-drawer-backdrop {
+  position: fixed;
+  inset: 0;
+  border: 0;
+  background: rgba(15, 13, 11, 0.3);
+  z-index: 1010;
+}
+
+#pg-attendance-reports-page-root .pg-attendance-reports-drawer {
+  position: fixed;
+  top: 14px;
+  bottom: 14px;
+  inset-inline-end: 0;
+  margin-inline-end: 14px;
+  width: clamp(380px, 42vw, 620px);
+  max-width: calc(100vw - 28px);
+  height: auto;
+  background: var(--adm-surface, #fffdf8);
+  border: 1px solid var(--adm-border, rgba(201, 166, 70, 0.22));
+  border-radius: 18px;
+  box-shadow: -12px 8px 38px rgba(15, 13, 11, 0.22);
+  z-index: 1011;
+  transform: translateX(100%);
+  transition: transform 0.24s ease;
+  padding: 18px;
+  overflow: auto;
+}
+
+#pg-attendance-reports-page-root .pg-attendance-reports-drawer--open {
+  transform: translateX(0);
+}
+
+#pg-attendance-reports-page-root .pg-attendance-reports-drawer-header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 14px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--adm-border, rgba(201, 166, 70, 0.22));
+}
+
+#pg-attendance-reports-page-root .pg-attendance-reports-drawer-meta {
+  margin: 0;
+  color: #5d5a52;
+  font-size: 0.86rem;
+  font-weight: 600;
+}
+
+#pg-attendance-reports-page-root .pg-attendance-reports-drawer-summary {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+#pg-attendance-reports-page-root .pg-attendance-reports-drawer-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 6px 10px;
+  border-radius: 999px;
+  border: 1px solid rgba(201, 166, 70, 0.32);
+  background: rgba(201, 166, 70, 0.1);
+  color: #5c4a1f;
+  font-size: 0.84rem;
+  font-weight: 700;
+}
+
+#pg-attendance-reports-page-root .pg-attendance-reports-drawer-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+@media (max-width: 720px) {
+  #pg-attendance-reports-page-root .pg-attendance-reports-drawer {
+    top: 0;
+    bottom: 0;
+    margin-inline-end: 0;
+    width: 100vw;
+    max-width: 100vw;
+    border-radius: 0;
+    border-inline-start: 0;
+    border-inline-end: 0;
+  }
+}
+
+#pg-attendance-take-page-root .pg-attendance-take-empty,
+#pg-attendance-reports-page-root .pg-attendance-reports-empty {
+  padding: 20px;
+  text-align: center;
+  color: #5d5a52;
+  font-weight: 600;
+}
+
+#pg-attendance-take-page-root .pg-attendance-take-error,
+#pg-attendance-reports-page-root .pg-attendance-reports-error {
+  padding: 12px 14px;
+  border-radius: 12px;
+  background: rgba(122, 31, 31, 0.08);
+  color: #7a1f1f;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+/* Summary line (take page) */
+#pg-attendance-take-page-root .pg-attendance-take-summary {
+  color: #5d5a52;
+  font-weight: 600;
+  font-size: 0.88rem;
+  padding: 8px 12px;
+  border-radius: 12px;
+  background: rgba(201, 166, 70, 0.1);
+  border: 1px dashed rgba(201, 166, 70, 0.35);
+}
+
+#pg-attendance-take-page-root .pg-attendance-take-summary strong {
+  color: var(--adm-ink, #0f0d0b);
+  font-weight: 800;
+}
+
+/* Points column (reports) */
+#pg-attendance-reports-page-root .pg-attendance-reports-points-cell {
+  text-align: center;
+  vertical-align: middle;
+}
+
+#pg-attendance-reports-page-root .pg-attendance-reports-points-pill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 2.25rem;
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-weight: 800;
+  font-size: 0.92rem;
+  background: var(--adm-btn-primary-bg, #c9a646);
+  color: var(--adm-btn-primary-ink, #0f0d0b);
+  border: 1px solid rgba(15, 13, 11, 0.08);
+}
+
+/* Quick nav footer (replaces default blue links) */
+#pg-attendance-take-page-root .pg-attendance-take-quicknav,
+#pg-attendance-reports-page-root .pg-attendance-reports-quicknav {
+  margin-top: 28px;
+  padding-top: 20px;
+  border-top: 1px dashed rgba(201, 166, 70, 0.45);
+}
+
+#pg-attendance-take-page-root .pg-attendance-take-quicknav-label,
+#pg-attendance-reports-page-root .pg-attendance-reports-quicknav-label {
+  display: block;
+  font-size: 0.78rem;
+  font-weight: 800;
+  color: #6e695c;
+  margin-bottom: 10px;
+}
+
+#pg-attendance-take-page-root .pg-attendance-take-quicknav-links,
+#pg-attendance-reports-page-root .pg-attendance-reports-quicknav-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+}
+
+#pg-attendance-take-page-root .pg-attendance-take-quicknav-link,
+#pg-attendance-reports-page-root .pg-attendance-reports-quicknav-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 11px 18px;
+  border-radius: 14px;
+  text-decoration: none;
+  color: var(--adm-ink, #0f0d0b);
+  font-weight: 700;
+  font-size: 0.9rem;
+  border: 1px solid var(--adm-border, rgba(201, 166, 70, 0.28));
+  background: linear-gradient(180deg, #fffdf8 0%, #f8f4e8 100%);
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.65) inset;
+  transition:
+    border-color 0.18s ease,
+    background 0.18s ease,
+    transform 0.12s ease;
+}
+
+#pg-attendance-take-page-root .pg-attendance-take-quicknav-link:hover,
+#pg-attendance-reports-page-root .pg-attendance-reports-quicknav-link:hover {
+  border-color: rgba(201, 166, 70, 0.65);
+  background: linear-gradient(180deg, #fffef9 0%, #f2ecd8 100%);
+  transform: translateY(-1px);
+}
+
+#pg-attendance-take-page-root .pg-attendance-take-quicknav-link:active,
+#pg-attendance-reports-page-root .pg-attendance-reports-quicknav-link:active {
+  transform: translateY(0);
+}
+
+#pg-attendance-take-page-root .pg-attendance-take-quicknav-link:focus-visible,
+#pg-attendance-reports-page-root .pg-attendance-reports-quicknav-link:focus-visible {
+  outline: 2px solid var(--adm-brand, #c9a646);
+  outline-offset: 2px;
+}
+
+#pg-attendance-take-page-root .pg-attendance-take-quicknav-link svg,
+#pg-attendance-reports-page-root .pg-attendance-reports-quicknav-link svg {
+  flex-shrink: 0;
+  opacity: 0.92;
+  color: #7a6230;
+}
+
+/* Table row hover (take) */
+#pg-attendance-take-page-root .pg-attendance-take-table tbody tr:hover td {
+  background: rgba(201, 166, 70, 0.06);
+}
+
+#pg-attendance-reports-page-root .pg-attendance-reports-table tbody tr:hover td {
+  background: rgba(201, 166, 70, 0.06);
+}

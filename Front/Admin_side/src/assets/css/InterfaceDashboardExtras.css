@@ -1,0 +1,156 @@
+/* GA + Special LMS — same visual language as main student admin dashboard (#pg-dashboard-page-root) */
+
+#pg-ga-dashboard-page-root .pg-ga-dashboard-error,
+#pg-special-dashboard-page-root .pg-special-dashboard-error {
+  color: #7a1f1f;
+  margin: 0 0 10px;
+  font-weight: 600;
+}
+
+/* Hero — gradient + welcome (matches DashboardPage) */
+#pg-ga-dashboard-page-root .pg-ga-dashboard-hero,
+#pg-special-dashboard-page-root .pg-special-dashboard-hero {
+  margin: 0 0 16px;
+  padding: 28px 26px 32px;
+  border-radius: 18px;
+  text-align: center;
+  background: linear-gradient(180deg, #0f0d0b 0%, #251714 48%, #7a1f1f 100%);
+  box-shadow: none;
+}
+
+#pg-ga-dashboard-page-root .pg-ga-dashboard-hero-welcome,
+#pg-special-dashboard-page-root .pg-special-dashboard-hero-welcome {
+  margin: 0 0 12px;
+  font-size: clamp(1.35rem, 1rem + 1.5vw, 1.85rem);
+  font-weight: 800;
+  color: #fffdf8;
+  line-height: 1.45;
+  font-family: "Cairo", "Tajawal", sans-serif;
+}
+
+#pg-ga-dashboard-page-root .pg-ga-dashboard-hero-lead,
+#pg-special-dashboard-page-root .pg-special-dashboard-hero-lead {
+  margin: 0 auto;
+  max-width: 42rem;
+  font-size: 0.98rem;
+  line-height: 1.65;
+  color: rgba(245, 242, 231, 0.88);
+}
+
+/* Metric cards — ivory, gold border (StatCard layout) */
+#pg-ga-dashboard-page-root .pg-ga-dashboard-stats-grid,
+#pg-special-dashboard-page-root .pg-special-dashboard-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 14px;
+  margin-bottom: 20px;
+}
+
+@media (max-width: 960px) {
+  #pg-ga-dashboard-page-root .pg-ga-dashboard-stats-grid,
+  #pg-special-dashboard-page-root .pg-special-dashboard-stats-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 520px) {
+  #pg-ga-dashboard-page-root .pg-ga-dashboard-stats-grid,
+  #pg-special-dashboard-page-root .pg-special-dashboard-stats-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+#pg-ga-dashboard-page-root .pg-ga-dashboard-stat-card,
+#pg-special-dashboard-page-root .pg-special-dashboard-stat-card {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  gap: 12px;
+  padding: 16px 18px;
+  border-radius: 16px;
+  border: 1px solid rgba(201, 166, 70, 0.22);
+  background: linear-gradient(180deg, #fffdf8 0%, #f5f2e7 100%);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+#pg-ga-dashboard-page-root .pg-ga-dashboard-stat-card-body,
+#pg-special-dashboard-page-root .pg-special-dashboard-stat-card-body {
+  text-align: right;
+  min-width: 0;
+}
+
+#pg-ga-dashboard-page-root .pg-ga-dashboard-stat-card-label,
+#pg-special-dashboard-page-root .pg-special-dashboard-stat-card-label {
+  display: block;
+  font-size: 0.86rem;
+  font-weight: 700;
+  color: #5d5a52;
+  margin-bottom: 6px;
+}
+
+#pg-ga-dashboard-page-root .pg-ga-dashboard-stat-card-value,
+#pg-special-dashboard-page-root .pg-special-dashboard-stat-card-value {
+  font-size: clamp(1.65rem, 1.2rem + 1.2vw, 2.05rem);
+  font-weight: 800;
+  color: #0f0d0b;
+  letter-spacing: -0.02em;
+}
+
+#pg-ga-dashboard-page-root .pg-ga-dashboard-stat-card-icon-wrap,
+#pg-special-dashboard-page-root .pg-special-dashboard-stat-card-icon-wrap {
+  width: 48px;
+  height: 48px;
+  border-radius: 14px;
+  display: grid;
+  place-items: center;
+  background: rgba(201, 166, 70, 0.14);
+  border: 1px solid rgba(201, 166, 70, 0.28);
+  flex-shrink: 0;
+}
+
+#pg-ga-dashboard-page-root .pg-ga-dashboard-stat-card-icon,
+#pg-special-dashboard-page-root .pg-special-dashboard-stat-card-icon {
+  color: #c9a646;
+}
+
+/* Main content card (overview / tip) */
+#pg-ga-dashboard-page-root .pg-ga-dashboard-card,
+#pg-special-dashboard-page-root .pg-special-dashboard-card {
+  padding: 18px 20px 20px;
+  border-radius: 18px;
+  border: 1px solid rgba(201, 166, 70, 0.22);
+  background: #fffdf8;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+#pg-ga-dashboard-page-root .pg-ga-dashboard-card-head,
+#pg-special-dashboard-page-root .pg-special-dashboard-card-head {
+  margin-bottom: 12px;
+}
+
+#pg-ga-dashboard-page-root .pg-ga-dashboard-block-title,
+#pg-special-dashboard-page-root .pg-special-dashboard-block-title {
+  margin: 0;
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: #0f0d0b;
+  font-family: "Cairo", "Tajawal", sans-serif;
+}
+
+#pg-ga-dashboard-page-root .pg-ga-dashboard-card p,
+#pg-special-dashboard-page-root .pg-special-dashboard-card p {
+  line-height: 1.55;
+  color: #3d2e2c;
+  margin: 0;
+}
+
+#pg-ga-dashboard-page-root .pg-ga-dashboard-card p + p,
+#pg-special-dashboard-page-root .pg-special-dashboard-card p + p {
+  margin-top: 0.75rem;
+}
+
+#pg-special-dashboard-page-root .pg-special-dashboard-meta {
+  color: #5d5a52;
+  font-size: 0.92rem;
+  font-weight: 600;
+}

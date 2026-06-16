@@ -1,0 +1,174 @@
+/* Question bank: custom rows + options; toolbar basics from admin-theme */
+
+#pg-questions-page-root .pg-questions-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+#pg-questions-page-root .pg-questions-empty {
+  color: #5d5a52;
+  padding: 14px 8px;
+  font-style: italic;
+}
+
+#pg-questions-page-root .pg-questions-group {
+  margin-bottom: 18px;
+}
+
+#pg-questions-page-root .pg-questions-group-title {
+  margin: 0 0 10px;
+  padding: 8px 10px;
+  border-radius: 12px;
+  background: rgba(31, 61, 43, 0.08);
+  color: #1f3d2b;
+  font-size: 1rem;
+}
+
+#pg-questions-page-root .pg-questions-chapter {
+  margin-bottom: 14px;
+}
+
+#pg-questions-page-root .pg-questions-chapter-title {
+  margin: 0 0 8px;
+  color: #6b5428;
+  font-size: 0.95rem;
+  font-weight: 800;
+}
+
+#pg-questions-page-root .pg-questions-question-row {
+  border-bottom: 1px solid rgba(201, 166, 70, 0.14);
+  padding: 14px 8px;
+  border-radius: 14px;
+  margin-bottom: 8px;
+  background: rgba(255, 253, 248, 0.85);
+}
+
+#pg-questions-page-root .pg-questions-question-row:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+}
+
+#pg-questions-page-root .pg-questions-question-text {
+  display: block;
+  color: #0f0d0b;
+  font-weight: 600;
+}
+
+#pg-questions-page-root .pg-questions-options {
+  list-style: none;
+  margin: 10px 0 0;
+  padding: 0 4px 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+#pg-questions-page-root .pg-questions-option {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 8px 10px;
+  padding: 8px 12px;
+  border-radius: 12px;
+  background: #fffdf8;
+  border: 1px solid rgba(201, 166, 70, 0.2);
+  color: #2a2624;
+  font-size: 0.9rem;
+  line-height: 1.45;
+}
+
+#pg-questions-page-root .pg-questions-option--correct {
+  border-color: rgba(31, 61, 43, 0.45);
+  background: linear-gradient(90deg, rgba(228, 244, 228, 0.95) 0%, rgba(255, 253, 248, 0.95) 100%);
+  box-shadow: none;
+}
+
+#pg-questions-page-root .pg-questions-option-label {
+  flex-shrink: 0;
+  font-weight: 800;
+  color: #5d5a52;
+  min-width: 1.25em;
+}
+
+#pg-questions-page-root .pg-questions-option-text {
+  flex: 1;
+  min-width: 0;
+}
+
+#pg-questions-page-root .pg-questions-option-badge {
+  flex-shrink: 0;
+  font-size: 0.68rem;
+  font-weight: 800;
+  padding: 3px 10px;
+  border-radius: 999px;
+  background: #1f3d2b;
+  color: #f5f2e7;
+}
+
+#pg-questions-page-root .pg-questions-question-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+#pg-questions-page-root .pg-questions-tag {
+  display: inline-block;
+  padding: 5px 12px;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  background: rgba(201, 166, 70, 0.12);
+  border: 1px solid rgba(201, 166, 70, 0.3);
+  color: #5d5a52;
+}
+
+#pg-questions-page-root .pg-questions-tag--easy {
+  border-color: rgba(31, 61, 43, 0.4);
+  background: rgba(228, 244, 228, 0.6);
+  color: #1f3d2b;
+}
+
+#pg-questions-page-root .pg-questions-tag--medium {
+  border-color: rgba(201, 166, 70, 0.45);
+  background: rgba(255, 242, 216, 0.85);
+  color: #6b5428;
+}
+
+#pg-questions-page-root .pg-questions-tag--hard {
+  border-color: rgba(122, 31, 31, 0.4);
+  background: rgba(253, 232, 230, 0.9);
+  color: #7a1f1f;
+}
+
+#pg-questions-page-root .pg-questions-question-actions {
+  display: inline-flex;
+  gap: 10px;
+  margin-inline-start: auto;
+  align-items: center;
+}
+
+#pg-questions-page-root .pg-questions-action-btn {
+  font-size: 0.88rem;
+  min-height: 44px;
+  padding: 10px 22px;
+}
+
+#pg-questions-page-root .pg-questions-highlight {
+  background: rgba(201, 166, 70, 0.18);
+  color: #0f0d0b;
+  border-radius: 6px;
+  padding: 0 4px;
+}
+
+/* Edit question popup (same overlay pattern as system dialogs) */
+#pg-questions-page-root .pg-questions-edit-modal.dlg-card {
+  width: min(680px, 100%);
+  max-height: min(90vh, 920px);
+  overflow-y: auto;
+  direction: rtl;
+  text-align: right;
+}

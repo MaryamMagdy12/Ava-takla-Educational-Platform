@@ -1,0 +1,37 @@
+.gac-home-note-card {
+  margin-top: 1.5rem;
+  padding: 1.1rem 1.15rem;
+  border-radius: 18px;
+  background: #ffffff;
+  border: 1px solid rgba(201, 120, 55, 0.32);
+  box-shadow: 0 8px 26px rgba(201, 120, 55, 0.08);
+}
+
+.gac-home-note-card__title {
+  margin: 0 0 0.55rem;
+  font-size: 1.05rem;
+  color: #902821;
+}
+
+.gac-home-note-card__list {
+  margin: 0;
+  padding-inline-start: 1.15rem;
+  color: rgba(10, 8, 8, 0.88);
+  line-height: 1.6;
+  font-size: 0.95rem;
+}
+
+.gac-home-note-card__list li {
+  margin-bottom: 0.35rem;
+}
+
+@media (max-width: 480px) {
+  .gac-home-note-card {
+    padding: 0.95rem 0.85rem;
+  }
+
+  .gac-home-note-card__list {
+    font-size: 0.9rem;
+    padding-inline-start: 1rem;
+  }
+}

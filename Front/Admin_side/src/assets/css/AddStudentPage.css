@@ -1,0 +1,217 @@
+/* Add student / GA family: success summary; forms from admin-theme */
+
+#pg-student-new-page-root .pg-student-new-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+#pg-student-new-page-root .pg-student-new-edit-learner-head {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 16px;
+  padding: 14px 16px;
+  border-radius: 16px;
+  border: 1px solid rgba(201, 166, 70, 0.22);
+  background: rgba(255, 253, 248, 0.92);
+}
+
+#pg-student-new-page-root .pg-student-new-edit-learner-avatar {
+  width: 56px;
+  height: 56px;
+  font-size: 1rem;
+}
+
+#pg-student-new-page-root .pg-student-new-edit-learner-caption {
+  margin: 0;
+  font-size: 0.88rem;
+  color: #5d5a52;
+}
+
+#pg-student-new-page-root .pg-student-new-success-card {
+  margin-top: 12px;
+  margin-bottom: 14px;
+  background: linear-gradient(180deg, #fffdf8 0%, #f5f2e7 100%);
+  border: 1px solid rgba(201, 166, 70, 0.28);
+  border-radius: 18px;
+  padding: 18px 20px;
+  box-shadow: none;
+}
+
+#pg-student-new-page-root .pg-student-new-success-head {
+  margin-bottom: 14px;
+}
+
+#pg-student-new-page-root .pg-student-new-success-title {
+  margin: 0 0 6px;
+  color: #0f0d0b;
+  font-size: 1.1rem;
+  font-weight: 800;
+}
+
+#pg-student-new-page-root .pg-student-new-success-subtitle {
+  margin: 0;
+  color: #5d5a52;
+  font-size: 0.95rem;
+}
+
+#pg-student-new-page-root .pg-student-new-success-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+#pg-student-new-page-root .pg-student-new-success-item {
+  display: grid;
+  gap: 6px;
+  padding: 14px;
+  background: #fffdf8;
+  border: 1px solid rgba(201, 166, 70, 0.2);
+  border-radius: 14px;
+}
+
+#pg-student-new-page-root .pg-student-new-success-item--wide {
+  grid-column: 1 / -1;
+}
+
+#pg-student-new-page-root .pg-student-new-success-label {
+  color: #5d5a52;
+  font-size: 0.88rem;
+  font-weight: 700;
+}
+
+#pg-student-new-page-root .pg-student-new-success-value {
+  color: #0f0d0b;
+  font-size: 1.02rem;
+  word-break: break-word;
+}
+
+#pg-student-new-page-root .pg-student-new-success-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: flex-end;
+  margin-top: 16px;
+}
+
+#pg-student-new-page-root .pg-student-new-success-btn {
+  border-radius: var(--adm-btn-primary-radius, 9999px);
+  border: none;
+  background: var(--adm-btn-primary-bg, #c9a646);
+  color: var(--adm-btn-primary-ink, #0f0d0b);
+  font-weight: 700;
+  cursor: pointer;
+  padding: 12px 28px;
+  min-height: 48px;
+  box-shadow: none;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+}
+
+#pg-student-new-page-root .pg-student-new-success-btn:hover:not(:disabled) {
+  transform: translateY(-1px);
+  background: var(--adm-btn-primary-bg-hover, #dfc062);
+  filter: none;
+  box-shadow: none;
+}
+
+#pg-student-new-page-root .pg-student-new-success-btn--ghost {
+  background: var(--adm-btn-secondary-fill, transparent);
+  color: #0f0d0b;
+  border: 1px solid var(--adm-btn-secondary-border, #c9a646);
+  box-shadow: none;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease, background-color 0.2s ease;
+}
+
+#pg-student-new-page-root .pg-student-new-success-btn--ghost:hover:not(:disabled) {
+  transform: translateY(-1px);
+  background: var(--adm-btn-secondary-fill-hover, rgba(201, 166, 70, 0.32));
+  border-color: #a88a34;
+  box-shadow: none;
+  filter: none;
+}
+
+#pg-student-new-page-root .pg-student-new-form-card-heading {
+  margin: 0 0 16px;
+  color: #0f0d0b;
+  font-size: 1.1rem;
+  font-weight: 800;
+}
+
+#pg-student-new-page-root .pg-student-new-form-card-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+
+#pg-student-new-page-root .pg-student-new-form-control {
+  font-size: 1.2rem;
+}
+
+#pg-student-new-page-root .pg-student-new-form-card-actions {
+  margin-top: 18px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+@media (max-width: 900px) {
+  #pg-student-new-page-root .pg-student-new-form-card-grid {
+    grid-template-columns: 1fr;
+  }
+
+  #pg-student-new-page-root .pg-student-new-success-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+#pg-student-new-page-root .pg-student-new-form-section-title {
+  grid-column: 1 / -1;
+  margin: 6px 0 0;
+  padding-top: 12px;
+  border-top: 1px dashed rgba(201, 166, 70, 0.35);
+  font-size: 0.82rem;
+  font-weight: 800;
+  color: #6e695c;
+}
+
+#pg-student-new-page-root .pg-student-new-import-hint {
+  grid-column: 1 / -1;
+  margin-top: 8px;
+  padding: 14px 16px;
+  border-radius: 14px;
+  border: 1px solid rgba(201, 166, 70, 0.28);
+  background: rgba(255, 253, 248, 0.95);
+  font-size: 0.86rem;
+  color: #4a463d;
+}
+
+#pg-student-new-page-root .pg-student-new-import-hint strong {
+  display: block;
+  margin-bottom: 8px;
+  color: #0f0d0b;
+  font-size: 0.9rem;
+}
+
+#pg-student-new-page-root .pg-student-new-import-hint-p {
+  margin: 0 0 8px;
+  line-height: 1.55;
+}
+
+#pg-student-new-page-root .pg-student-new-import-hint-list {
+  margin: 0 0 10px;
+  padding-inline-start: 1.1rem;
+  line-height: 1.6;
+}
+
+#pg-student-new-page-root .pg-student-new-import-hint code {
+  display: inline-block;
+  margin-top: 4px;
+  padding: 4px 8px;
+  border-radius: 8px;
+  background: rgba(201, 166, 70, 0.12);
+  font-size: 0.78rem;
+  font-weight: 600;
+  word-break: break-all;
+}

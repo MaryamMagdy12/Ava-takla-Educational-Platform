@@ -1,0 +1,111 @@
+.sc-app-site-header {
+  padding: 0.85rem clamp(0.85rem, 3vw, 2rem) 0;
+}
+
+.sc-app-site-header__inner {
+  max-width: 960px;
+  margin-inline: auto;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.65rem 1rem;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid rgba(201, 120, 55, 0.34);
+  box-shadow: 0 8px 28px rgba(144, 40, 33, 0.07);
+}
+
+.sc-app-site-header__logo {
+  flex-shrink: 0;
+  width: 48px;
+  height: 48px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 50%;
+  border: 2px solid rgba(201, 120, 55, 0.45);
+  box-shadow: 0 4px 12px rgba(144, 40, 33, 0.12);
+}
+
+.sc-app-site-header__text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  min-width: 0;
+  flex: 1;
+}
+
+.sc-app-site-header__nav {
+  flex-shrink: 0;
+  margin-inline-start: auto;
+}
+
+.sc-app-site-header__btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.45rem 0.85rem;
+  border-radius: 10px;
+  font-size: 0.88rem;
+  font-weight: 700;
+  font-family: inherit;
+  border: 1px solid rgba(144, 40, 33, 0.35);
+  color: #902821;
+  background: linear-gradient(135deg, rgba(144, 40, 33, 0.08), rgba(201, 120, 55, 0.12));
+  cursor: pointer;
+}
+
+.sc-app-site-header__btn:hover {
+  border-color: rgba(201, 120, 55, 0.65);
+}
+
+.sc-app-site-header__school {
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: rgba(144, 40, 33, 0.75);
+  line-height: 1.3;
+}
+
+.sc-app-site-header__title {
+  font-size: 1.02rem;
+  font-weight: 800;
+  color: #902821;
+  line-height: 1.25;
+}
+
+@media (max-width: 768px) {
+  .sc-app-site-header {
+    padding: 0.65rem clamp(0.65rem, 4vw, 1.25rem) 0;
+  }
+
+  .sc-app-site-header__inner {
+    padding: 0.55rem 0.75rem;
+    gap: 0.6rem;
+    border-radius: 14px;
+  }
+
+  .sc-app-site-header__logo {
+    width: 44px;
+    height: 44px;
+  }
+
+  .sc-app-site-header__school {
+    font-size: 0.65rem;
+  }
+
+  .sc-app-site-header__title {
+    font-size: 0.9rem;
+    line-height: 1.3;
+  }
+}
+
+@media (max-width: 420px) {
+  .sc-app-site-header__inner {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .sc-app-site-header__text {
+    align-items: center;
+  }
+}

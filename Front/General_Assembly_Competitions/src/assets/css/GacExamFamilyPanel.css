@@ -1,0 +1,92 @@
+.gac-exam-family-panel {
+  padding: 1.2rem 1.25rem;
+  border-radius: 20px;
+  background: linear-gradient(160deg, #ffffff 0%, rgba(255, 252, 245, 0.98) 100%);
+  border: 1px solid rgba(201, 120, 55, 0.38);
+  box-shadow: 0 10px 30px rgba(144, 40, 33, 0.07);
+  transition: box-shadow 0.25s ease;
+}
+
+.gac-exam-family-panel:hover {
+  box-shadow: 0 16px 44px rgba(201, 120, 55, 0.2);
+}
+
+.gac-exam-family-panel__row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.55rem;
+}
+
+.gac-exam-family-panel__mode {
+  font-size: 0.75rem;
+  font-weight: 800;
+  text-transform: none;
+  color: #fffef9;
+  background: linear-gradient(90deg, #902821, #c97837);
+  padding: 0.22rem 0.55rem;
+  border-radius: 999px;
+}
+
+.gac-exam-family-panel__count {
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: rgba(144, 40, 33, 0.62);
+}
+
+.gac-exam-family-panel__title {
+  margin: 0 0 0.35rem;
+  font-size: 1.08rem;
+  color: #902821;
+  line-height: 1.35;
+}
+
+.gac-exam-family-panel__course {
+  margin: 0 0 0.35rem;
+  font-size: 0.9rem;
+  color: rgba(10, 8, 8, 0.82);
+}
+
+.gac-exam-family-panel__window {
+  margin: 0 0 0.85rem;
+  font-size: 0.85rem;
+  color: rgba(10, 8, 8, 0.65);
+}
+
+.gac-exam-family-panel__btn {
+  width: 100%;
+  border: 2px dashed rgba(201, 120, 55, 0.55);
+  border-radius: 14px;
+  padding: 0.55rem 0.75rem;
+  font: inherit;
+  font-weight: 800;
+  color: #5c2e0a;
+  background: rgba(234, 239, 219, 0.65);
+  cursor: pointer;
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.gac-exam-family-panel__btn:hover {
+  background: rgba(201, 120, 55, 0.16);
+  border-color: #902821;
+  transform: translateY(-2px);
+}
+
+@media (max-width: 480px) {
+  .gac-exam-family-panel {
+    padding: 1rem 0.9rem;
+    border-radius: 16px;
+  }
+
+  .gac-exam-family-panel__row {
+    flex-wrap: wrap;
+  }
+
+  .gac-exam-family-panel__btn {
+    min-height: 48px;
+  }
+}

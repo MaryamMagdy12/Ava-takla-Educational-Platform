@@ -1,0 +1,202 @@
+/* Shared admin panel form controls (RTL-friendly). */
+.adm-form-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+
+.adm-label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  font-weight: 700;
+  color: #0f0d0b;
+  font-size: 0.95rem;
+}
+
+.adm-input,
+.adm-textarea,
+.adm-select {
+  margin-bottom:2rem;
+  width: 100%;
+  min-height: 46px;
+  padding: 0.65rem 0.85rem;
+  border-radius: 14px;
+  border: 1px solid rgba(201, 166, 70, 0.22);
+  background: #fffdf8;
+  font: inherit;
+  color: #0f0d0b;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.adm-input:focus,
+.adm-textarea:focus,
+.adm-select:focus {
+  outline: 2px solid rgba(201, 166, 70, 0.35);
+  outline-offset: 2px;
+  border-color: rgba(201, 166, 70, 0.55);
+  box-shadow: none;
+}
+
+.adm-textarea {
+  min-height: 5rem;
+  resize: vertical;
+}
+
+.adm-form-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 8px;
+}
+
+.adm-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 46px;
+  padding: 11px 26px;
+  border-radius: var(--adm-btn-primary-radius, 9999px);
+  font-weight: 700;
+  border: none;
+  cursor: pointer;
+  font: inherit;
+  text-decoration: none;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, filter 0.2s ease, background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.adm-btn:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+.adm-btn-primary {
+  color: #fffdf8;
+  background: var(--adm-btn-primary-bg, #c9a646);
+  border: none;
+  border-radius: var(--adm-btn-primary-radius, 9999px);
+  padding: 12px 28px;
+  min-height: 48px;
+  box-shadow: var(--adm-btn-primary-shadow, none);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+}
+
+.adm-btn-primary:hover:not(:disabled) {
+  transform: translateY(-1px);
+  background: var(--adm-btn-primary-bg-hover, #dfc062);
+  filter: none;
+  box-shadow: var(--adm-btn-primary-shadow-hover, none);
+}
+
+.adm-btn-secondary {
+  color: #c9a646;
+  font-weight: 500;
+  background: var(--adm-btn-secondary-fill, transparent);
+  border: 1px solid var(--adm-btn-secondary-border, #c9a646);
+  border-radius: var(--adm-btn-primary-radius, 9999px);
+  box-shadow: var(--adm-btn-secondary-shadow, none);
+}
+
+.adm-btn-secondary:hover:not(:disabled) {
+  transform: translateY(-1px);
+  background: var(--adm-brand);
+  border-color: var(--adm-brand);
+  color: #fffdf8;
+  box-shadow: none;
+}
+
+.adm-btn-danger {
+  color: #fffdf8;
+  background: #7a1f1f;
+  border-radius: var(--adm-btn-primary-radius, 9999px);
+  border: none;
+  padding: 11px 24px;
+  box-shadow: none;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+}
+
+.adm-btn-danger:hover:not(:disabled) {
+  background: #fff;
+  color: #7a1f1f;
+  border: 2px solid #7a1f1f;
+  box-shadow: none;
+  filter: none;
+  transform: translateY(-1px);
+}
+
+/* Standalone delete on cards (e.g. GA lectures) */
+.adm-btn.adm-delete {
+  min-height: 44px;
+  padding: 10px 22px;
+}
+
+/* Solid burgundy delete (matches toolbar/table delete styling) */
+.adm-delete {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  padding: 10px 22px;
+  border-radius: var(--adm-btn-primary-radius, 9999px);
+  border: none;
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+  color: #fffdf8;
+  background: #7a1f1f;
+  box-shadow: none;
+  text-decoration: none;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+}
+
+.adm-delete:hover:not(:disabled) {
+  background: #fff;
+  color: #7a1f1f;
+  border: 2px solid #7a1f1f;
+  filter: none;
+  transform: translateY(-1px);
+  box-shadow: none;
+}
+
+.adm-delete:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+.adm-card {
+  background: linear-gradient(180deg, #fffdf8 0%, #f5f2e7 100%);
+  border: 1px solid rgba(201, 166, 70, 0.22);
+  border-radius: 18px;
+  padding: 1rem 1.15rem;
+  box-shadow: none;
+  margin-bottom: 12px;
+}
+
+.adm-section-title {
+  margin: 0 0 12px;
+  color: #0f0d0b;
+  font-size: 1.05rem;
+  font-weight: 800;
+}
+
+.adm-error {
+  color: #7a1f1f;
+  margin: 0 0 10px;
+  font-weight: 600;
+}
+
+.adm-muted {
+  margin: 0;
+  font-size: 0.88rem;
+  color: #5d5a52;
+}
+
+.adm-link-accent {
+  color: #c9a646;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.adm-link-accent:hover {
+  text-decoration: underline;
+}

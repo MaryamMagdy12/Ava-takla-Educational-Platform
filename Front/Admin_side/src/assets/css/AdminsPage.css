@@ -1,0 +1,25 @@
+/* Admins list: shared admin-theme; toolbar layout only */
+
+#pg-admins-page-root .pg-admins-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+#pg-admins-page-root .pg-admins-datatable-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  min-height: 44px;
+  padding: 10px 22px;
+  margin-inline-end: 8px;
+  font-size: 0.88rem;
+}
+
+#pg-admins-page-root .pg-admins-datatable-btn:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}

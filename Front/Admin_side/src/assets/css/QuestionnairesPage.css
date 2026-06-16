@@ -1,0 +1,113 @@
+/* Questionnaires admin list — table + row actions (aligned with StudentsPage pattern) */
+
+#pg-questionnaires-page-root .pg-questionnaires-datatable {
+  overflow: visible;
+}
+
+#pg-questionnaires-page-root .pg-questionnaires-datatable-th:last-child,
+#pg-questionnaires-page-root .pg-questionnaires-datatable-td:last-child {
+  overflow: visible;
+  position: relative;
+  vertical-align: top;
+}
+
+#pg-questionnaires-page-root .pg-questionnaires-actions-wrap {
+  position: relative;
+  display: inline-block;
+  text-align: start;
+}
+
+#pg-questionnaires-page-root .pg-questionnaires-actions-trigger {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 44px;
+  padding: 10px 18px;
+  font-size: 0.88rem;
+  font-weight: 700;
+  cursor: pointer;
+  border-radius: 999px;
+  border: 1px solid rgba(201, 166, 70, 0.55);
+  background: #fffdf8;
+  color: #6b5428;
+  transition: background 0.2s ease, border-color 0.2s ease;
+}
+
+#pg-questionnaires-page-root .pg-questionnaires-actions-trigger:hover {
+  background: rgba(201, 166, 70, 0.12);
+  border-color: rgba(201, 166, 70, 0.85);
+}
+
+#pg-questionnaires-page-root .pg-questionnaires-actions-chevron {
+  font-size: 0.65rem;
+  opacity: 0.85;
+}
+
+#pg-questionnaires-page-root .pg-questionnaires-actions-menu {
+  position: absolute;
+  inset-inline-end: 0;
+  top: calc(100% + 6px);
+  z-index: 80;
+  min-width: 220px;
+  margin: 0;
+  padding: 6px 0;
+  list-style: none;
+  background: #fffdf8;
+  border: 1px solid rgba(201, 166, 70, 0.35);
+  border-radius: 16px;
+  box-shadow: 0 12px 32px rgba(15, 13, 11, 0.12);
+}
+
+#pg-questionnaires-page-root .pg-questionnaires-actions-menu-item {
+  display: block;
+  width: 100%;
+  text-align: inherit;
+  padding: 12px 18px;
+  font: inherit;
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: #3d3528;
+  text-decoration: none;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  transition: background 0.15s ease;
+}
+
+#pg-questionnaires-page-root .pg-questionnaires-actions-menu-item:hover {
+  background: rgba(201, 166, 70, 0.14);
+}
+
+#pg-questionnaires-page-root .pg-questionnaires-actions-menu-item--danger {
+  color: #fff;
+  background: #7a1f1f;
+  font-weight: 700;
+}
+
+#pg-questionnaires-page-root .pg-questionnaires-actions-menu-item--danger:hover {
+  background: #611818;
+}
+
+#pg-questionnaires-page-root .pg-questionnaires-titlecell {
+  max-width: 280px;
+  font-weight: 700;
+  color: #0f0d0b;
+  line-height: 1.35;
+}
+
+#pg-questionnaires-page-root .pg-questionnaires-mutedcell {
+  font-size: 0.88rem;
+  color: #5d5a52;
+  line-height: 1.45;
+  max-width: 14rem;
+}
+
+#pg-questionnaires-page-root .pg-questionnaires-status-pill {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 999px;
+  font-size: 0.82rem;
+  font-weight: 700;
+  background: rgba(201, 166, 70, 0.16);
+  color: #4a3d1f;
+}

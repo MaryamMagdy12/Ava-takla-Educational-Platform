@@ -1,0 +1,22 @@
+.portal-scroll-hint {
+  text-align: center;
+  font-size: clamp(0.78rem, 1.7vw, 0.86rem);
+  font-weight: 600;
+  color: rgba(92, 33, 33, 0.45);
+  margin: 0 0 clamp(1.25rem, 3vw, 1.75rem);
+  max-width: 32rem;
+  margin-inline: auto;
+  line-height: 1.55;
+  padding: 0.45rem 0.85rem;
+  border-radius: 999px;
+  background: rgba(255, 253, 245, 0.55);
+  border: 1px solid rgba(212, 175, 55, 0.18);
+}
+
+@media (max-width: 480px) {
+  .portal-scroll-hint {
+    border-radius: 14px;
+    padding: 0.55rem 0.65rem;
+    max-width: 100%;
+  }
+}

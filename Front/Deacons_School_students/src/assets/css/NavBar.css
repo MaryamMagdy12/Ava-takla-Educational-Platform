@@ -1,0 +1,414 @@
+#pg-navbar-root {
+  position: relative;
+  z-index: 30;
+  padding: 0.5rem 0.85rem;
+  background: #f5f2e7;
+  border: 1px solid rgba(201, 166, 70, 0.18);
+  border-radius: 16px;
+  box-shadow: 0 4px 18px rgba(15, 13, 11, 0.04);
+  transition: border-color 0.28s ease, box-shadow 0.28s ease;
+}
+
+#pg-navbar-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+#pg-navbar-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
+  font-weight: 800;
+  font-family: 'Cairo', sans-serif;
+  flex-shrink: 0;
+}
+
+.pg-navbar-logo-ring {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  /* background: linear-gradient(135deg, #c9a646 0%, #e4c86d 100%); */
+  background-image: url("../../assets/images/مدرسة الشمامسة.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  box-shadow:
+    0 0 0 4px rgba(201, 166, 70, 0.12),
+    0 8px 18px rgba(201, 166, 70, 0.22);
+  flex-shrink: 0;
+}
+
+.pg-navbar-logo-initials {
+  font-size: 0.85rem;
+  font-weight: 800;
+  color: #0f0d0b;
+  letter-spacing: 0.02em;
+}
+
+.pg-navbar-brand-text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.08rem;
+  min-width: 0;
+}
+
+.pg-navbar-brand-title {
+  font-size: 0.88rem;
+  font-weight: 800;
+  color: #0f0d0b;
+  line-height: 1.25;
+}
+
+.pg-navbar-brand-sub {
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: #c9a646;
+  line-height: 1.2;
+}
+
+#pg-navbar-toggle {
+  display: none;
+  width: 46px;
+  height: 46px;
+  border-radius: 12px;
+  border: 1px solid rgba(201, 166, 70, 0.35);
+  background: rgba(255, 255, 255, 0.85);
+  cursor: pointer;
+  padding: 0.5rem;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 0.22rem;
+  margin-inline-start: auto;
+  transition: background 0.2s ease, border-color 0.2s ease;
+}
+
+#pg-navbar-root .pg-navbar__toggle-line {
+  display: block;
+  width: 18px;
+  height: 2px;
+  border-radius: 999px;
+  background: #0f0d0b;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+  transform-origin: center;
+}
+
+#pg-navbar-root .pg-navbar__toggle-btn--open {
+  background: rgba(201, 166, 70, 0.15);
+}
+
+#pg-navbar-root .pg-navbar__toggle-btn--open .pg-navbar__toggle-line:nth-child(1) {
+  transform: translateY(4px) rotate(45deg);
+}
+
+#pg-navbar-root .pg-navbar__toggle-btn--open .pg-navbar__toggle-line:nth-child(2) {
+  opacity: 0;
+}
+
+#pg-navbar-root .pg-navbar__toggle-btn--open .pg-navbar__toggle-line:nth-child(3) {
+  transform: translateY(-4px) rotate(-45deg);
+}
+
+#pg-navbar-mobile-panel {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+#pg-navbar-root .pg-navbar__panel {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+#pg-navbar-menu {
+  display: flex;
+  align-items: center;
+  gap: 0.28rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  flex: 1 1 auto;
+}
+
+#pg-navbar-root .pg-navbar__link {
+  text-decoration: none;
+  color: #0f0d0b;
+  font-size: 0.82rem;
+  padding: 0.42rem 0.65rem;
+  border-radius: 999px;
+  transition: background 0.22s ease, color 0.22s ease, transform 0.22s ease, box-shadow 0.22s ease;
+  font-family: 'Cairo', sans-serif;
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+}
+
+#pg-navbar-root .pg-navbar__link-icon {
+  flex-shrink: 0;
+  color: currentColor;
+}
+
+#pg-navbar-root .pg-navbar__link--active {
+  background: #e9e3d3;
+  color: #c9a646;
+  box-shadow: none;
+}
+
+#pg-navbar-root .pg-navbar__link--active .pg-navbar__link-icon {
+  color: #c9a646;
+}
+
+#pg-navbar-root .pg-navbar__link:hover:not(.pg-navbar__link--active) {
+  background: rgba(233, 227, 211, 0.65);
+  transform: translateY(-1px);
+}
+
+#pg-navbar-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-shrink: 0;
+}
+
+.pg-navbar-bell {
+  position: relative;
+  width: 42px;
+  height: 42px;
+  border-radius: 12px;
+  border: 1px solid rgba(201, 166, 70, 0.45);
+  background: transparent;
+  color: #0f0d0b;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s ease, transform 0.2s ease, border-color 0.2s ease;
+}
+
+.pg-navbar-bell:hover {
+  background: #fff;
+  transform: translateY(-2px);
+}
+
+.pg-navbar-bell-icon {
+  display: block;
+}
+
+.pg-navbar-bell-dot {
+  position: absolute;
+  top: 8px;
+  inset-inline-end: 8px;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #7a1f1f;
+  border: 1px solid #fffdf8;
+}
+
+#pg-navbar-profile {
+  position: relative;
+}
+
+#pg-navbar-profile-trigger {
+  border: 1px solid rgba(201, 166, 70, 0.28);
+  background: rgba(255, 255, 255, 0.85);
+  border-radius: 14px;
+  padding: 0.35rem 0.5rem 0.35rem 0.45rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  cursor: pointer;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+#pg-navbar-profile-trigger:hover {
+  border-color: rgba(201, 166, 70, 0.45);
+  box-shadow: 0 4px 14px rgba(15, 13, 11, 0.06);
+  transform: translateY(-1px);
+}
+
+.pg-navbar-profile-text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.05rem;
+  text-align: start;
+}
+
+#pg-navbar-student-name {
+  margin: 0;
+  font-weight: 700;
+  color: #0f0d0b;
+  font-size: 0.82rem;
+  max-width: 8.5rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+#pg-navbar-student-level {
+  margin: 0;
+  font-weight: 600;
+  color: #c9a646;
+  font-size: 0.72rem;
+}
+
+.pg-navbar-profile-avatar {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  border: 2px solid rgba(201, 166, 70, 0.55);
+  box-shadow: 0 0 0 1px rgba(201, 166, 70, 0.12);
+}
+
+.pg-navbar-profile-avatar.pg-learner-avatar--initials {
+  background: #fffdf8;
+  color: #7a1f1f;
+  font-size: 0.78rem;
+}
+
+.pg-navbar-profile-chevron {
+  color: #0f0d0b;
+  opacity: 0.5;
+  flex-shrink: 0;
+  display: block;
+}
+
+#pg-navbar-root .pg-navbar-profile-menu {
+  position: absolute;
+  top: calc(100% + 0.45rem);
+  inset-inline-end: 0;
+  width: 220px;
+  border-radius: 16px;
+  border: 1px solid rgba(201, 166, 70, 0.28);
+  background: #fffdf8;
+  box-shadow: 0 12px 28px rgba(15, 13, 11, 0.1);
+  padding: 0.45rem;
+  display: none;
+}
+
+#pg-navbar-root .pg-navbar-profile-menu--open {
+  display: grid;
+  gap: 0.35rem;
+  animation: pg-nav-drop 0.22s ease both;
+}
+
+.pg-navbar-profile-item {
+  text-decoration: none;
+  border-radius: 12px;
+  padding: 0.5rem 0.65rem;
+  color: #0f0d0b;
+  font-weight: 600;
+  font-size: 0.88rem;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.pg-navbar-profile-item:hover {
+  background: #f5f2e7;
+  transform: translateX(-2px);
+}
+
+#pg-navbar-logout {
+  border-radius: 12px;
+  border: none;
+  padding: 0.55rem 0.7rem;
+  font: inherit;
+  background: #7a1f1f;
+  color: #f5f2e7;
+  cursor: pointer;
+  font-family: 'Cairo', sans-serif;
+  font-weight: 700;
+  font-size: 0.88rem;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+#pg-navbar-logout:hover {
+  background: #651616;
+  transform: translateY(-1px);
+}
+
+#pg-navbar-root:hover {
+  border-color: rgba(201, 166, 70, 0.35);
+  box-shadow: 0 10px 26px rgba(15, 13, 11, 0.07);
+}
+
+@keyframes pg-nav-drop {
+  from {
+    opacity: 0;
+    transform: translateY(-6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 900px) {
+  #pg-navbar-toggle {
+    display: inline-flex;
+  }
+
+  #pg-navbar-root .pg-navbar__panel {
+    display: none;
+    width: 100%;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.75rem;
+    padding-top: 0.5rem;
+  }
+
+  #pg-navbar-root .pg-navbar__panel--open {
+    display: flex;
+  }
+
+  #pg-navbar-menu {
+    flex-direction: column;
+    width: 100%;
+    align-items: stretch;
+  }
+
+  #pg-navbar-root .pg-navbar__link {
+    width: 100%;
+    justify-content: flex-start;
+  }
+
+  #pg-navbar-actions {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  #pg-navbar-root .pg-navbar-profile-menu {
+    position: static;
+    width: 100%;
+    margin-top: 0.35rem;
+  }
+
+  #pg-navbar-logout {
+    width: 100%;
+  }
+}
+
+@media (min-width: 901px) {
+  #pg-navbar-mobile-panel {
+    display: flex;
+    flex: 1 1 auto;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.75rem;
+    min-width: 0;
+  }
+}

@@ -1,0 +1,53 @@
+.sc-home-enter-strip {
+  margin-top: 1.5rem;
+  padding: 1rem 1.05rem;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.88);
+  border: 1px dashed rgba(201, 120, 55, 0.5);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.55rem;
+}
+
+.sc-home-enter-strip__cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.65rem 1.2rem;
+  border-radius: 999px;
+  font-weight: 800;
+  font-size: 0.95rem;
+  text-decoration: none;
+  color: #fffef9;
+  background: linear-gradient(118deg, #902821, #c97837);
+  box-shadow: 0 10px 26px rgba(144, 40, 33, 0.25);
+  transition:
+    transform 0.22s ease,
+    box-shadow 0.22s ease;
+}
+
+.sc-home-enter-strip__cta:hover {
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 14px 34px rgba(201, 120, 55, 0.32);
+}
+
+.sc-home-enter-strip__hint {
+  margin: 0;
+  font-size: 0.88rem;
+  color: rgba(10, 8, 8, 0.68);
+  line-height: 1.5;
+}
+
+@media (max-width: 640px) {
+  .sc-home-enter-strip {
+    align-items: stretch;
+    padding: 0.9rem 0.85rem;
+  }
+
+  .sc-home-enter-strip__cta {
+    width: 100%;
+    min-height: 48px;
+    box-sizing: border-box;
+  }
+}

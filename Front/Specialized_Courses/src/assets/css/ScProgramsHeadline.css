@@ -1,0 +1,28 @@
+.sc-programs-headline {
+  margin-bottom: 1.25rem;
+}
+
+.sc-programs-headline__h {
+  margin: 0 0 0.4rem;
+  font-size: clamp(1.38rem, 2.9vw, 1.9rem);
+  font-weight: 800;
+  color: #902821;
+}
+
+.sc-programs-headline__p {
+  margin: 0;
+  max-width: 44rem;
+  line-height: 1.6;
+  color: rgba(10, 8, 8, 0.78);
+  font-size: 0.96rem;
+}
+
+@media (max-width: 480px) {
+  .sc-programs-headline {
+    margin-bottom: 1rem;
+  }
+
+  .sc-programs-headline__p {
+    font-size: 0.9rem;
+  }
+}

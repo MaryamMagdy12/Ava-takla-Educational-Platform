@@ -1,0 +1,353 @@
+#gac-exams-hub-root {
+  --gac-exams-hub-gold: #c9a646;
+  --gac-exams-hub-burgundy: #7a1f1f;
+  --gac-exams-hub-charcoal: #0f0d0b;
+  --gac-exams-hub-ivory: #f5f2e7;
+  --gac-exams-hub-border: rgba(201, 166, 70, 0.22);
+  --gac-exams-hub-cream: #f9f7f2;
+  background: var(--gac-exams-hub-cream);
+  border-radius: 4px;
+  padding: 0.25rem 0 1rem;
+}
+
+#gac-exams-hub-root .gac-exams-hub__top {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem 1.5rem;
+  margin-bottom: 0.85rem;
+  padding: 0 1rem;
+}
+
+#gac-exams-hub-root .gac-exams-hub__hero {
+  flex: 1 1 12rem;
+  min-width: 0;
+  padding: 0.85rem 0.2rem;
+}
+
+#gac-exams-hub-root .gac-exams-hub__title {
+  margin: 0 0 0.25rem;
+  font-size: clamp(1.7rem, 2.8vw, 2.9rem);
+  color: var(--gac-exams-hub-charcoal);
+}
+
+#gac-exams-hub-root .gac-exams-hub__subtitle {
+  margin: 0;
+  color: rgba(15, 13, 11, 0.58);
+  max-width: 40rem;
+  line-height: 1.5;
+}
+
+#gac-exams-hub-root .gac-exams-hub__summary {
+  flex: 0 1 auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+  margin: 0;
+  align-items: stretch;
+}
+
+#gac-exams-hub-root .gac-exams-hub__summary-box {
+  min-width: 92px;
+  border-radius: 12px;
+  background: linear-gradient(180deg, #fffdf8 0%, #f5f2e7 100%);
+  border: 1px solid var(--gac-exams-hub-border);
+  padding: 0.42rem 0.55rem;
+  display: grid;
+  gap: 0.15rem;
+}
+
+#gac-exams-hub-root .gac-exams-hub__summary-box span {
+  color: rgba(15, 13, 11, 0.56);
+  font-size: 0.78rem;
+}
+
+#gac-exams-hub-root .gac-exams-hub__summary-box strong {
+  color: #0f0d0b;
+  font-size: 1.15rem;
+}
+
+#gac-exams-hub-root .gac-exams-hub__toolbar {
+  display: grid;
+  grid-template-columns: 1fr 160px 160px;
+  gap: 0.65rem;
+  margin: 0 1rem 1rem;
+  border-radius: 14px;
+  border: 1px solid var(--gac-exams-hub-border);
+  background: #fffdf8;
+  padding: 0.65rem;
+}
+
+#gac-exams-hub-root .gac-exams-hub__search-wrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+  min-width: 0;
+}
+
+#gac-exams-hub-root .gac-exams-hub__search-icon {
+  position: absolute;
+  inset-inline-start: 0.75rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: rgba(15, 13, 11, 0.42);
+  display: grid;
+  place-items: center;
+  pointer-events: none;
+}
+
+#gac-exams-hub-root .gac-exams-hub__search,
+#gac-exams-hub-root .gac-exams-hub__select {
+  height: 46px;
+  border-radius: 12px;
+  border: 1px solid rgba(201, 166, 70, 0.32);
+  background: #fff;
+  font: inherit;
+  color: #0f0d0b;
+  padding: 0 0.75rem;
+  transition:
+    box-shadow 0.2s ease,
+    border-color 0.2s ease;
+}
+
+#gac-exams-hub-root .gac-exams-hub__search {
+  width: 100%;
+  padding-inline-start: 2.5rem;
+}
+
+#gac-exams-hub-root .gac-exams-hub__search:focus,
+#gac-exams-hub-root .gac-exams-hub__select:focus {
+  outline: none;
+  border-color: rgba(201, 166, 70, 0.6);
+  box-shadow: 0 0 0 4px rgba(201, 166, 70, 0.12);
+}
+
+#gac-exams-hub-root .gac-exams-hub__search-wrap:focus-within .gac-exams-hub__search-icon {
+  color: rgba(201, 166, 70, 0.85);
+}
+
+#gac-exams-hub-root .gac-exams-hub__error {
+  border-radius: 12px;
+  padding: 0.6rem 0.8rem;
+  background: rgba(234, 85, 85, 0.12);
+  border: 1px solid rgba(234, 85, 85, 0.4);
+  color: #7a1e1e;
+  margin: 0 1rem 1rem;
+}
+
+#gac-exams-hub-root .gac-exams-hub__empty,
+#gac-exams-hub-root .gac-exams-hub__loading {
+  margin: 0 1rem 1rem;
+  font-size: 0.95rem;
+  color: rgba(15, 13, 11, 0.62);
+  line-height: 1.55;
+}
+
+#gac-exams-hub-root .gac-exams-hub__grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  padding: 0 1rem;
+}
+
+#gac-exams-hub-root .gac-exams-hub__card {
+  padding: 1rem;
+  background: linear-gradient(180deg, #fffdf8 0%, #f5f2e7 100%);
+  border: 1px solid var(--gac-exams-hub-border);
+  border-radius: 18px;
+  box-shadow: 0 8px 24px rgba(15, 13, 11, 0.06);
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+#gac-exams-hub-root .gac-exams-hub__card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 26px rgba(15, 13, 11, 0.09);
+}
+
+#gac-exams-hub-root .gac-exams-hub__head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.6rem;
+}
+
+#gac-exams-hub-root .gac-exams-hub__chip {
+  display: inline-flex;
+  font-size: 0.75rem;
+  font-weight: 600;
+  border: 1px solid rgba(201, 166, 70, 0.45);
+  border-radius: 999px;
+  padding: 0.2rem 0.55rem;
+  color: #7a1f1f;
+  background: rgba(201, 166, 70, 0.14);
+}
+
+#gac-exams-hub-root .gac-exams-hub__state {
+  font-size: 0.78rem;
+  padding: 0.22rem 0.55rem;
+  border-radius: 999px;
+  font-weight: 700;
+}
+
+#gac-exams-hub-root .gac-exams-hub__state--avail {
+  background: rgba(0, 150, 136, 0.18);
+  color: #00695c;
+}
+
+#gac-exams-hub-root .gac-exams-hub__state--soon {
+  background: rgba(255, 183, 77, 0.35);
+  color: #b45309;
+}
+
+#gac-exams-hub-root .gac-exams-hub__state--done {
+  background: rgba(100, 181, 246, 0.28);
+  color: #1565c0;
+}
+
+#gac-exams-hub-root .gac-exams-hub__score {
+  margin: 0;
+  font-size: 0.95rem;
+  font-weight: 800;
+  color: #0f0d0b;
+}
+
+#gac-exams-hub-root .gac-exams-hub__score-muted {
+  margin: 0;
+  font-size: 0.88rem;
+  color: rgba(15, 13, 11, 0.45);
+  font-weight: 600;
+}
+
+#gac-exams-hub-root .gac-exams-hub__finished-footer {
+  margin-top: 0.75rem;
+  padding-top: 0.65rem;
+  border-top: 1px solid rgba(201, 166, 70, 0.22);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+#gac-exams-hub-root .gac-exams-hub__details-link {
+  text-decoration: none;
+  color: var(--gac-exams-hub-gold);
+  font-weight: 800;
+  font-size: 0.88rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.15rem;
+}
+
+#gac-exams-hub-root .gac-exams-hub__details-link:hover {
+  color: #b8922f;
+}
+
+#gac-exams-hub-root .gac-exams-hub__card-title {
+  margin: 0.5rem 0 0.35rem;
+  color: var(--gac-exams-hub-charcoal);
+  font-size: 1.35rem;
+  font-weight: 800;
+  text-align: center;
+  line-height: 1.35;
+}
+
+#gac-exams-hub-root .gac-exams-hub__meta {
+  margin: 0.2rem 0;
+  color: rgba(15, 13, 11, 0.58);
+  font-size: 0.92rem;
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+#gac-exams-hub-root .gac-exams-hub__meta-icon {
+  flex-shrink: 0;
+  opacity: 0.72;
+  color: rgba(15, 13, 11, 0.58);
+}
+
+#gac-exams-hub-root .gac-exams-hub__meta-sep {
+  color: rgba(15, 13, 11, 0.35);
+  font-weight: 700;
+}
+
+#gac-exams-hub-root .gac-exams-hub__primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 0.65rem;
+  text-decoration: none;
+  border-radius: 12px;
+  padding: 0.65rem 0.9rem;
+  height: 44px;
+  width: 100%;
+  box-sizing: border-box;
+  background: linear-gradient(135deg, #d1a14d 0%, #e4c86d 100%);
+  color: #0f0d0b;
+  font-weight: 700;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 6px 20px rgba(201, 166, 70, 0.3);
+  transition: transform 0.2s ease;
+  font: inherit;
+}
+
+#gac-exams-hub-root .gac-exams-hub__primary:hover:not(:disabled) {
+  transform: translateY(-2px);
+}
+
+#gac-exams-hub-root .gac-exams-hub__primary:disabled {
+  opacity: 0.65;
+  cursor: wait;
+}
+
+#gac-exams-hub-root .gac-exams-hub__secondary {
+  margin-top: 0.65rem;
+  border-radius: 12px;
+  height: 44px;
+  padding: 0 0.9rem;
+  background: #fffdf8;
+  color: rgba(15, 13, 11, 0.42);
+  border: 1px solid rgba(15, 13, 11, 0.12);
+  cursor: not-allowed;
+  width: 100%;
+  font-weight: 600;
+  font: inherit;
+}
+
+@media (max-width: 860px) {
+  #gac-exams-hub-root .gac-exams-hub__toolbar {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  #gac-exams-hub-root .gac-exams-hub__top {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  #gac-exams-hub-root .gac-exams-hub__hero {
+    flex: 1 1 auto;
+  }
+
+  #gac-exams-hub-root .gac-exams-hub__summary {
+    justify-content: space-between;
+  }
+
+  #gac-exams-hub-root .gac-exams-hub__summary-box {
+    flex: 1 1 0;
+    min-width: 0;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 321px) {
+  #gac-exams-hub-root .gac-exams-hub__grid {
+    grid-template-columns: repeat(auto-fit, minmax(275px, 1fr));
+  }
+}

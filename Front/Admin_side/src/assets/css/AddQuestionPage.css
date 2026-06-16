@@ -1,0 +1,159 @@
+/* Add question: editor layout; forms from admin-theme */
+
+#pg-question-new-page-root .pg-question-new-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+#pg-question-new-page-root .pg-question-new-form-card-heading {
+  margin: 0 0 16px;
+  color: #0f0d0b;
+  font-size: 1.1rem;
+  font-weight: 800;
+}
+
+#pg-question-new-page-root .pg-question-new-form-card-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+
+#pg-question-new-page-root .pg-question-new-form-card-actions {
+  margin-top: 18px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+@media (max-width: 900px) {
+  #pg-question-new-page-root .pg-question-new-form-card-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+#pg-question-new-page-root .pg-question-new-editor {
+  display: grid;
+  grid-template-columns: 1fr 320px;
+  gap: 18px;
+  margin-bottom: 18px;
+}
+
+#pg-question-new-page-root .pg-question-new-editor-main,
+#pg-question-new-page-root .pg-question-new-editor-side {
+  background: linear-gradient(180deg, #fffdf8 0%, #f5f2e7 100%);
+  border: 1px solid rgba(201, 166, 70, 0.22);
+  border-radius: 20px;
+  padding: 20px 22px;
+  box-shadow: none;
+}
+
+#pg-question-new-page-root .pg-question-new-editor-main {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  column-gap: 24px;
+  row-gap: 18px;
+}
+
+#pg-question-new-page-root .pg-question-new-editor-title {
+  margin: 0 0 4px;
+  grid-column: 1 / -1;
+  color: #0f0d0b;
+  font-size: 1.08rem;
+  font-weight: 800;
+}
+
+#pg-question-new-page-root .pg-question-new-full {
+  grid-column: 1 / -1;
+}
+
+#pg-question-new-page-root .pg-question-new-question-input {
+  width: 100%;
+}
+
+/* Reference: label above field (RTL), clear vertical rhythm */
+#pg-question-new-page-root .pg-question-new-form-label {
+  display: grid;
+  gap: 12px;
+  align-content: start;
+  text-align: right;
+  color: #2a2624;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+/* Reference: white fields, soft champagne border, ~22px radius, light lift shadow */
+#pg-question-new-page-root .pg-question-new-form-control {
+  width: 100%;
+  min-height: 52px;
+  padding: 14px 18px;
+  border-radius: 22px;
+  border: 1px solid rgba(201, 166, 70, 0.3);
+  background: #ffffff;
+  color: #0f0d0b;
+  font: inherit;
+  box-shadow: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+#pg-question-new-page-root .pg-question-new-form-control:hover {
+  border-color: rgba(201, 166, 70, 0.42);
+}
+
+#pg-question-new-page-root .pg-question-new-form-control:focus {
+  outline: none;
+  border-color: rgba(201, 166, 70, 0.58);
+  box-shadow: none;
+  outline: 2px solid rgba(201, 166, 70, 0.35);
+  outline-offset: 2px;
+  transform: none;
+}
+
+#pg-question-new-page-root .pg-question-new-answer-correct .pg-question-new-form-control {
+  border-color: rgba(31, 61, 43, 0.42);
+  background: rgba(31, 61, 43, 0.06);
+  box-shadow: none;
+}
+
+#pg-question-new-page-root .pg-question-new-editor-side h4 {
+  margin: 0 0 16px;
+  color: #0f0d0b;
+  font-size: 1rem;
+  font-weight: 800;
+}
+
+#pg-question-new-page-root .pg-question-new-editor-actions {
+  display: grid;
+  gap: 10px;
+  margin-top: 14px;
+}
+
+#pg-question-new-page-root .pg-question-new-secondary-btn {
+  min-height: 46px;
+  padding: 11px 24px;
+  border-radius: var(--adm-btn-primary-radius, 9999px);
+  border: 1px solid var(--adm-btn-secondary-border, #c9a646);
+  background: var(--adm-btn-secondary-fill, transparent);
+  color: #c9a646;
+  cursor: pointer;
+  font: inherit;
+  font-weight: 700;
+  box-shadow: none;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease, border-color 0.2s ease;
+}
+
+#pg-question-new-page-root .pg-question-new-secondary-btn:hover {
+  transform: translateY(-1px);
+  background: #c9a646;
+  color: #fffdf8;
+  border: 2px solid #c9a646;
+  border-color: #fff9ea;
+  box-shadow: none;
+}
+
+@media (max-width: 1024px) {
+  #pg-question-new-page-root .pg-question-new-editor {
+    grid-template-columns: 1fr;
+  }
+}

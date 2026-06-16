@@ -1,0 +1,106 @@
+#gac-page-courses-root.gac-page-courses {
+  min-height: 0;
+  padding: 0;
+  background: transparent;
+}
+
+#gac-page-courses-root .gac-page-courses__error {
+  margin: 0 0 1rem;
+  padding: 0.65rem 0.85rem;
+  border-radius: 10px;
+  background: rgba(144, 40, 33, 0.1);
+  color: #902821;
+  font-size: 0.92rem;
+  font-weight: 700;
+}
+
+#gac-page-courses-root .gac-page-courses__empty {
+  margin: 0 0 1rem;
+  font-size: 0.95rem;
+  color: #5c4a47;
+  line-height: 1.55;
+}
+
+#gac-page-courses-root .gac-page-courses__section-title {
+  margin: 0 0 0.75rem;
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: #902821;
+}
+
+#gac-page-courses-root .gac-page-courses__section-title:not(:first-of-type) {
+  margin-top: 1.35rem;
+}
+
+#gac-page-courses-root .gac-page-courses__grid {
+  width:30%;
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
+}
+
+/* Filter: نوع المحاضرة (pills) */
+#gac-page-courses-root .gac-page-courses__filter {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.75rem 1.25rem;
+  margin: 0 0 1rem;
+  justify-content: flex-start;
+}
+
+#gac-page-courses-root .gac-page-courses__filter-label {
+  font-size: 0.9rem;
+  font-weight: 800;
+  color: #0f0d0b;
+}
+
+#gac-page-courses-root .gac-page-courses__filter-pills {
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+#gac-page-courses-root .gac-page-courses__filter-pills button {
+  border-radius: 999px;
+  padding: 0.45rem 1.15rem;
+  font-size: 0.88rem;
+  font-weight: 700;
+  font-family: inherit;
+  cursor: pointer;
+  border: 1px solid rgba(15, 13, 11, 0.18);
+  background: #fffdf8;
+  color: #0f0d0b;
+  transition: background 0.18s ease, color 0.18s ease, border-color 0.18s ease;
+}
+
+#gac-page-courses-root .gac-page-courses__filter-pills button:hover {
+  border-color: rgba(15, 13, 11, 0.35);
+}
+
+#gac-page-courses-root .gac-page-courses__filter-pills button.gac-page-courses__filter-pill--active {
+  background: #0f0d0b;
+  color: #fffdf8;
+  border-color: #0f0d0b;
+}
+
+#gac-page-courses-root .gac-page-courses__filter-empty {
+  margin: 0 0 1rem;
+  font-size: 0.92rem;
+  color: #5c4a47;
+}
+
+@media (max-width: 640px) {
+  #gac-page-courses-root .gac-page-courses__grid {
+    grid-template-columns: 1fr;
+  }
+
+  #gac-page-courses-root .gac-page-courses__filter {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  #gac-page-courses-root .gac-page-courses__filter-pills {
+    justify-content: flex-start;
+  }
+}

@@ -1,0 +1,33 @@
+.adm-learner-avatar {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 999px;
+  flex-shrink: 0;
+  overflow: hidden;
+  font-size: 0.72rem;
+  font-weight: 800;
+  line-height: 1;
+  color: #0f0d0b;
+  background: linear-gradient(135deg, #c9a646 0%, #e4c86d 100%);
+  border: 1px solid rgba(201, 166, 70, 0.45);
+  box-shadow: 0 2px 8px rgba(15, 13, 11, 0.08);
+}
+
+.adm-learner-avatar--photo {
+  padding: 0;
+  background: #e9e3d3;
+}
+
+.adm-learner-avatar--photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.adm-learner-avatar--initials {
+  letter-spacing: -0.02em;
+}

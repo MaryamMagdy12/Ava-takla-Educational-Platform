@@ -1,0 +1,453 @@
+/* Students / GA families lists: shared admin-theme for table & toolbar */
+
+#pg-students-page-root .pg-students-mono {
+  font-variant-numeric: tabular-nums;
+  unicode-bidi: embed;
+}
+
+#pg-students-page-root .pg-students-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+#pg-students-page-root .pg-students-toolbar-filter {
+  display: inline-flex;
+  flex-direction: column;
+  gap: 4px;
+  min-width: 160px;
+}
+
+#pg-students-page-root .pg-students-toolbar-filter-label {
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: #5d5a52;
+  letter-spacing: 0.02em;
+}
+
+#pg-students-page-root .pg-students-highlight {
+  display: inline-block;
+  padding: 2px 6px;
+  border-radius: 8px;
+  background: rgba(201, 166, 70, 0.18);
+  color: #0f0d0b;
+}
+
+#pg-students-page-root .pg-students-namecell {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 0;
+}
+
+/* Special learners (and lists): larger profile preview in table */
+#pg-students-page-root .pg-students-photo-preview-cell {
+  vertical-align: middle;
+}
+
+#pg-students-page-root .pg-students-photo-preview {
+  width: 56px;
+  height: 56px;
+  border-radius: 12px;
+  object-fit: cover;
+  border: 1px solid rgba(201, 166, 70, 0.28);
+  display: block;
+  background: rgba(201, 166, 70, 0.1);
+}
+
+#pg-students-page-root .pg-students-photo-preview--empty {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  border-radius: 12px;
+  border: 1px dashed rgba(201, 166, 70, 0.35);
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: #8a7a62;
+  background: rgba(255, 253, 248, 0.9);
+}
+
+#pg-students-page-root .pg-students-edit-photo-preview {
+  width: 96px;
+  height: 96px;
+  border-radius: 16px;
+  object-fit: cover;
+  border: 1px solid rgba(201, 166, 70, 0.3);
+  display: block;
+  margin-bottom: 12px;
+  background: rgba(201, 166, 70, 0.08);
+}
+
+/* Profile photo lightbox (special learners) — above edit overlay (1200) */
+#pg-students-page-root .pg-students-photo-lightbox-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1300;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px 16px;
+  background: rgba(10, 8, 8, 0.72);
+  cursor: zoom-out;
+}
+
+#pg-students-page-root .pg-students-photo-lightbox-card {
+  cursor: default;
+  max-width: min(96vw, 980px);
+  max-height: 92vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+  padding: 16px 18px 20px;
+  background: linear-gradient(180deg, #fffdf8 0%, #f5f2e7 100%);
+  border: 1px solid rgba(201, 166, 70, 0.35);
+  border-radius: 20px;
+  box-shadow: 0 24px 64px rgba(0, 0, 0, 0.35);
+}
+
+#pg-students-page-root .pg-students-photo-lightbox-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  width: 100%;
+}
+
+#pg-students-page-root .pg-students-photo-lightbox-title {
+  margin: 0;
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: #0f0d0b;
+  text-align: start;
+  flex: 1;
+  min-width: 0;
+}
+
+#pg-students-page-root .pg-students-photo-lightbox-close {
+  flex-shrink: 0;
+  border: none;
+  border-radius: 12px;
+  padding: 10px 16px;
+  font-weight: 700;
+  cursor: pointer;
+  background: rgba(201, 166, 70, 0.22);
+  color: #4a3d1f;
+}
+
+#pg-students-page-root .pg-students-photo-lightbox-close:hover {
+  background: rgba(201, 166, 70, 0.35);
+}
+
+#pg-students-page-root .pg-students-photo-lightbox-img-wrap {
+  max-width: 100%;
+  max-height: calc(92vh - 100px);
+  overflow: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#pg-students-page-root .pg-students-photo-lightbox-img {
+  max-width: 100%;
+  max-height: calc(92vh - 100px);
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  border-radius: 12px;
+  border: 1px solid rgba(201, 166, 70, 0.25);
+}
+
+#pg-students-page-root .pg-students-datatable-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  min-height: 44px;
+  padding: 10px 22px;
+  margin-inline-end: 8px;
+  font-size: 0.88rem;
+}
+
+/* Theme sets overflow:hidden on all datatables — that clips the actions dropdown */
+#pg-students-page-root .pg-students-datatable {
+  overflow: visible;
+}
+
+#pg-students-page-root .pg-students-datatable-th:last-child,
+#pg-students-page-root .pg-students-datatable-td:last-child {
+  overflow: visible;
+  position: relative;
+  vertical-align: top;
+}
+
+/* Row actions dropdown (replaces inline action buttons) */
+#pg-students-page-root .pg-students-actions-wrap {
+  position: relative;
+  display: inline-block;
+  text-align: start;
+}
+
+#pg-students-page-root .pg-students-actions-trigger {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 44px;
+  padding: 10px 18px;
+  font-size: 0.88rem;
+  font-weight: 700;
+  cursor: pointer;
+  border-radius: 999px;
+  border: 1px solid rgba(201, 166, 70, 0.55);
+  background: #fffdf8;
+  color: #6b5428;
+  transition: background 0.2s ease, border-color 0.2s ease;
+}
+
+#pg-students-page-root .pg-students-actions-trigger:hover {
+  background: rgba(201, 166, 70, 0.12);
+  border-color: rgba(201, 166, 70, 0.85);
+}
+
+#pg-students-page-root .pg-students-actions-chevron {
+  font-size: 0.65rem;
+  opacity: 0.85;
+}
+
+#pg-students-page-root .pg-students-actions-menu {
+  position: absolute;
+  inset-inline-end: 0;
+  top: calc(100% + 6px);
+  z-index: 80;
+  min-width: 220px;
+  margin: 0;
+  padding: 6px 0;
+  list-style: none;
+  background: #fffdf8;
+  border: 1px solid rgba(201, 166, 70, 0.35);
+  border-radius: 16px;
+  box-shadow: 0 12px 32px rgba(15, 13, 11, 0.12);
+}
+
+#pg-students-page-root .pg-students-actions-menu-item {
+  display: block;
+  width: 100%;
+  text-align: inherit;
+  padding: 12px 18px;
+  font: inherit;
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: #3d3528;
+  text-decoration: none;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  transition: background 0.15s ease;
+}
+
+#pg-students-page-root .pg-students-actions-menu-item:hover {
+  background: rgba(201, 166, 70, 0.14);
+}
+
+#pg-students-page-root .pg-students-actions-menu-item--danger {
+  color: #fff;
+  background: #7a1f1f;
+  font-weight: 700;
+}
+
+#pg-students-page-root .pg-students-actions-menu-item--danger:hover {
+  background: #611818;
+}
+
+#pg-students-page-root .pg-students-modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 40;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background: rgba(10, 8, 8, 0.45);
+}
+
+#pg-students-page-root .pg-students-modal {
+  width: min(760px, 100%);
+  max-height: 80vh;
+  overflow: auto;
+  background: linear-gradient(180deg, #fffdf8 0%, #f5f2e7 100%);
+  border: 1px solid rgba(201, 166, 70, 0.22);
+  border-radius: 22px;
+  padding: 18px 20px;
+  box-shadow: none;
+}
+
+#pg-students-page-root .pg-students-modal-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+
+#pg-students-page-root .pg-students-modal-title {
+  margin: 0;
+  color: #0f0d0b;
+  font-weight: 800;
+}
+
+#pg-students-page-root .pg-students-modal-subtitle {
+  margin: 6px 0 0;
+  color: #5d5a52;
+}
+
+#pg-students-page-root .pg-students-modal-close {
+  border: none;
+  border-radius: 12px;
+  padding: 9px 14px;
+  font-weight: 700;
+  background: rgba(201, 166, 70, 0.16);
+  color: #6b5428;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+#pg-students-page-root .pg-students-modal-close:hover {
+  background: rgba(201, 166, 70, 0.26);
+}
+
+#pg-students-page-root .pg-students-modal-note,
+#pg-students-page-root .pg-students-modal-error {
+  color: #2a2624;
+}
+
+#pg-students-page-root .pg-students-modal-error {
+  color: #7a1f1f;
+  font-weight: 600;
+}
+
+#pg-students-page-root .pg-students-attempts-list {
+  display: grid;
+  gap: 12px;
+}
+
+#pg-students-page-root .pg-students-attempt-card {
+  background: #fffdf8;
+  border: 1px solid rgba(201, 166, 70, 0.2);
+  border-radius: 16px;
+  padding: 14px 16px;
+}
+
+#pg-students-page-root .pg-students-attempt-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 8px;
+}
+
+#pg-students-page-root .pg-students-attempt-title {
+  margin: 0;
+  color: #0f0d0b;
+  font-weight: 800;
+}
+
+#pg-students-page-root .pg-students-attempt-status {
+  display: inline-flex;
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: rgba(201, 166, 70, 0.14);
+  border: 1px solid rgba(201, 166, 70, 0.28);
+  color: #5d5a52;
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+#pg-students-page-root .pg-students-attempt-line {
+  margin: 4px 0;
+  color: #2a2624;
+}
+
+/* Special learners edit dialog */
+#pg-students-page-root .pg-students-edit-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1200;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  background: rgba(15, 13, 11, 0.45);
+}
+
+#pg-students-page-root .pg-students-edit-dialog {
+  width: min(440px, 100%);
+  max-height: min(90vh, 640px);
+  overflow: auto;
+  border-radius: 16px;
+  padding: 20px 22px;
+  background: #faf7f0;
+  border: 1px solid rgba(201, 166, 70, 0.35);
+  box-shadow: 0 18px 48px rgba(15, 13, 11, 0.18);
+}
+
+#pg-students-page-root .pg-students-edit-dialog h3 {
+  margin: 0 0 14px;
+  font-size: 1.1rem;
+  color: #0f0d0b;
+}
+
+#pg-students-page-root .pg-students-edit-field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 12px;
+}
+
+#pg-students-page-root .pg-students-edit-field label {
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: #5d5a52;
+}
+
+#pg-students-page-root .pg-students-edit-field input,
+#pg-students-page-root .pg-students-edit-field select,
+#pg-students-page-root .pg-students-edit-field textarea {
+  width: 100%;
+  padding: 8px 10px;
+  border-radius: 10px;
+  border: 1px solid rgba(92, 74, 71, 0.25);
+  background: #fff;
+  font: inherit;
+}
+
+#pg-students-page-root .pg-students-edit-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: flex-end;
+  margin-top: 8px;
+}
+
+@media (max-width: 480px) {
+  #pg-students-page-root .pg-students-edit-overlay {
+    padding: 10px;
+    align-items: flex-end;
+  }
+
+  #pg-students-page-root .pg-students-edit-dialog {
+    max-height: 92dvh;
+    border-radius: 16px 16px 0 0;
+  }
+
+  #pg-students-page-root .pg-students-edit-actions {
+    flex-direction: column-reverse;
+  }
+
+  #pg-students-page-root .pg-students-edit-actions .pg-students-datatable-btn {
+    width: 100%;
+  }
+}

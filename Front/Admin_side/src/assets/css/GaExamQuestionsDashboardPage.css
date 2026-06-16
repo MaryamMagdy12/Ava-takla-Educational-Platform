@@ -1,0 +1,80 @@
+/* Family exam — questions board (form-first, matches exam editor visual language) */
+#ga-family-exam-questions-root {
+  width: 100%;
+}
+
+#ga-family-exam-questions-root .ga-feq-toolbar-gap {
+  margin-bottom: 1rem;
+}
+
+#ga-family-exam-questions-root .ga-feq-exam-picker {
+  margin-bottom: 1rem;
+}
+
+#ga-family-exam-questions-root .ga-feq-hero-card {
+  width: 100%;
+  max-width: min(52rem, 100%);
+  margin-inline: auto;
+  margin-bottom: 1.25rem;
+  padding: 1.35rem 1.45rem;
+  background: linear-gradient(180deg, #fffdf8 0%, #f5f2e7 100%);
+  border: 1px solid rgba(201, 166, 70, 0.28);
+  border-radius: 18px;
+  box-shadow: 0 10px 32px rgba(15, 13, 11, 0.06);
+  box-sizing: border-box;
+}
+
+#ga-family-exam-questions-root .ga-feq-hero-title {
+  margin: 0 0 1rem;
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: #0f0d0b;
+}
+
+#ga-family-exam-questions-root .ga-feq-exam-badge {
+  margin: -0.25rem 0 1rem;
+  padding: 0.45rem 0.75rem;
+  border-radius: 12px;
+  background: rgba(201, 166, 70, 0.12);
+  border: 1px solid rgba(201, 166, 70, 0.35);
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: #5c4818;
+}
+
+#ga-family-exam-questions-root .ga-feq-section-label {
+  margin: 0 0 1rem;
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: #0f0d0b;
+}
+
+#ga-family-exam-questions-root .ga-feq-list-panel {
+  margin-top: 0.5rem;
+}
+
+#ga-family-exam-questions-root .ga-feq-list-heading {
+  margin: 0 0 0.65rem;
+  font-size: 1rem;
+  font-weight: 800;
+  color: #0f0d0b;
+}
+
+#ga-family-exam-questions-root .ga-feq-hint {
+  margin: 0 0 0.75rem;
+  font-size: 0.88rem;
+  color: rgba(15, 13, 11, 0.55);
+  line-height: 1.55;
+}
+
+#ga-family-exam-questions-root .ga-feq-hint details {
+  margin-top: 0.35rem;
+}
+
+#ga-family-exam-questions-root .ga-feq-form-actions {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.65rem;
+  flex-wrap: wrap;
+}

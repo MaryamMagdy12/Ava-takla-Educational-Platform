@@ -1,0 +1,25 @@
+.gac-courses-page-header {
+  margin-bottom: 1.35rem;
+}
+
+.gac-courses-page-header__title {
+  margin: 0 0 0.4rem;
+  font-size: clamp(1.4rem, 3vw, 1.85rem);
+  font-weight: 800;
+  color: #902821;
+  letter-spacing: -0.02em;
+}
+
+.gac-courses-page-header__subtitle {
+  margin: 0;
+  max-width: 40rem;
+  line-height: 1.6;
+  color: rgba(144, 40, 33, 0.76);
+  font-size: 0.98rem;
+}
+
+@media (max-width: 480px) {
+  .gac-courses-page-header__subtitle {
+    font-size: 0.9rem;
+  }
+}

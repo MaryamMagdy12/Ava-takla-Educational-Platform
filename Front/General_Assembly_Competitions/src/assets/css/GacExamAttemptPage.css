@@ -1,0 +1,886 @@
+#gac-exam-attempt-root {
+  --ea-gold: #c9a646;
+  --ea-gold-soft: #e4c86d;
+  --ea-burgundy: #7a1f1f;
+  --ea-green: #1f3d2b;
+  --ea-charcoal: #0f0d0b;
+  --ea-ivory: #f5f2e7;
+  --ea-beige: #e9e3d3;
+  --ea-border: rgba(201, 166, 70, 0.22);
+  --ea-danger: #c62828;
+  --ea-muted: rgba(15, 13, 11, 0.55);
+  --ea-card: #fffdf8;
+  --ea-radius-lg: 18px;
+  --ea-radius-md: 16px;
+  --ea-radius-sm: 12px;
+  --ea-shadow: 0 10px 28px rgba(15, 13, 11, 0.07);
+  max-width: min(100%, 58rem);
+  margin: 0 auto;
+  padding: 1rem 1rem 1.5rem;
+  min-height: 60vh;
+  box-sizing: border-box;
+  background: linear-gradient(180deg, var(--ea-ivory) 0%, #faf8f3 55%, var(--ea-ivory) 100%);
+  border-radius: var(--ea-radius-lg);
+  border: 1px solid var(--ea-border);
+}
+
+#gac-exam-attempt-root .gac-exam-attempt__error {
+  border-radius: var(--ea-radius-sm);
+  padding: 0.85rem 1rem;
+  background: rgba(234, 85, 85, 0.1);
+  border: 1px solid rgba(234, 85, 85, 0.35);
+  color: var(--ea-burgundy);
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+#gac-exam-attempt-root .gac-exam-attempt__back {
+  border-radius: var(--ea-radius-sm);
+  border: 1px solid var(--ea-border);
+  padding: 0.65rem 1rem;
+  font: inherit;
+  font-weight: 700;
+  background: var(--ea-beige);
+  color: var(--ea-burgundy);
+  cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease;
+}
+
+#gac-exam-attempt-root .gac-exam-attempt__back:hover {
+  border-color: rgba(201, 166, 70, 0.45);
+  box-shadow: 0 6px 18px rgba(15, 13, 11, 0.08);
+}
+
+#gac-exam-attempt-root .gac-exam-attempt__loading {
+  color: var(--ea-muted);
+  font-weight: 600;
+  text-align: center;
+  padding: 2rem;
+}
+
+/* Toolbar */
+#gac-exam-attempt-root .gac-exam-attempt__toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1rem 1.15rem;
+  background: var(--ea-card);
+  border: 1px solid var(--ea-border);
+  border-radius: var(--ea-radius-lg);
+  box-shadow: var(--ea-shadow);
+}
+
+#gac-exam-attempt-root .gac-exam-attempt__toolbar-main {
+  flex: 1 1 12rem;
+  min-width: 0;
+}
+
+#gac-exam-attempt-root .gac-exam-attempt__toolbar-label {
+  margin: 0 0 0.2rem;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--ea-muted);
+}
+
+#gac-exam-attempt-root .gac-exam-attempt__toolbar-title {
+  margin: 0 0 0.35rem;
+  color: var(--ea-charcoal);
+  font-size: clamp(1.15rem, 2.5vw, 1.45rem);
+  font-weight: 800;
+  line-height: 1.35;
+}
+
+#gac-exam-attempt-root .gac-exam-attempt__toolbar-meta {
+  margin: 0;
+  font-size: 0.88rem;
+  color: var(--ea-muted);
+  font-weight: 600;
+}
+
+#gac-exam-attempt-root .gac-exam-attempt__timer-wrap {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.6rem 0.95rem;
+  border-radius: var(--ea-radius-md);
+  background: rgba(245, 242, 231, 0.95);
+  border: 1px solid rgba(201, 166, 70, 0.38);
+  box-shadow: 0 4px 14px rgba(15, 13, 11, 0.05);
+  flex-shrink: 0;
+}
+
+#gac-exam-attempt-root .gac-exam-attempt__timer-wrap--urgent {
+  border-color: rgba(198, 40, 40, 0.45);
+  background: rgba(255, 235, 238, 0.65);
+  animation: gac-exam-timer-pulse 1.5s ease-in-out infinite;
+}
+
+@keyframes gac-exam-timer-pulse {
+  0%,
+  100% {
+    box-shadow: 0 4px 14px rgba(198, 40, 40, 0.12);
+  }
+  50% {
+    box-shadow: 0 6px 20px rgba(198, 40, 40, 0.22);
+  }
+}
+
+#gac-exam-attempt-root .gac-exam-attempt__timer-icon {
+  font-size: 1.65rem;
+  line-height: 1;
+  opacity: 0.88;
+}
+
+#gac-exam-attempt-root .gac-exam-attempt__timer-body {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.1rem;
+}
+
+#gac-exam-attempt-root .gac-exam-attempt__timer-label {
+  font-size: 0.76rem;
+  font-weight: 700;
+  color: var(--ea-muted);
+}
+
+#gac-exam-attempt-root .gac-exam-attempt__timer-value {
+  font-size: 1.28rem;
+  font-weight: 800;
+  color: var(--ea-gold);
+  font-variant-numeric: tabular-nums;
+  letter-spacing: 0.02em;
+}
+
+#gac-exam-attempt-root .gac-exam-attempt__timer-wrap--urgent .gac-exam-attempt__timer-value {
+  color: var(--ea-danger);
+}
+
+/* Progress */
+#gac-exam-attempt-root .gac-exam-attempt__progress-block {
+  margin: 1rem 0 1.1rem;
+  padding: 0.85rem 1rem;
+  background: var(--ea-card);
+  border: 1px solid var(--ea-border);
+  border-radius: var(--ea-radius-md);
+  box-shadow: 0 4px 16px rgba(15, 13, 11, 0.04);
+}
+
+#gac-exam-attempt-root .gac-exam-attempt__progress-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.35rem;
+}
+
+#gac-exam-attempt-root .gac-exam-attempt__progress-head--sub {
+  margin-top: 0.65rem;
+  margin-bottom: 0.35rem;
+}
+
+#gac-exam-attempt-root .gac-exam-attempt__progress-caption {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--ea-muted);
+}
+
+#gac-exam-attempt-root .gac-exam-attempt__progress-pct {
+  font-size: 0.8rem;
+  font-weight: 800;
+  color: var(--ea-burgundy);
+  font-variant-numeric: tabular-nums;
+}
+
+#gac-exam-attempt-root .gac-exam-attempt__progress {
+  height: 10px;
+  background: rgba(15, 13, 11, 0.08);
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+#gac-exam-attempt-root .gac-exam-attempt__progress--overall {
+  margin-bottom: 0.15rem;
+}
+
+#gac-exam-attempt-root .gac-exam-attempt__progress-bar {
+  display: block;
+  height: 100%;
+  background: linear-gradient(90deg, var(--ea-burgundy) 0%, var(--ea-gold) 100%);
+  transition: width 0.35s ease;
+  border-radius: 999px;
+}
+
+#gac-exam-attempt-root .gac-exam-attempt__progress-bar--page {
+  background: linear-gradient(90deg, rgba(31, 61, 43, 0.85) 0%, var(--ea-gold) 100%);
+  opacity: 0.95;
+}
+
+/* Question cards */
+#gac-exam-attempt-root .gac-exam-attempt__question-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.65rem;
+}
+
+#gac-exam-attempt-root .gac-exam-attempt__question-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.3rem 0.7rem;
+  border-radius: 999px;
+  font-size: 0.78rem;
+  font-weight: 800;
+  color: var(--ea-burgundy);
+  background: rgba(201, 166, 70, 0.14);
+  border: 1px solid rgba(201, 166, 70, 0.35);
+}
+
+#gac-exam-attempt-root .gac-exam-attempt__question-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.3rem 0.65rem;
+  border-radius: 999px;
+  font-size: 0.78rem;
+  font-weight: 800;
+}
+
+#gac-exam-attempt-root .gac-exam-attempt__question-status--done {
+  color: #1f3d2b;
+  background: rgba(76, 175, 80, 0.14);
+  border: 1px solid rgba(31, 61, 43, 0.55);
+}
+
+#gac-exam-attempt-root .gac-exam-attempt__question-status-num {
+  font-variant-numeric: tabular-nums;
+}
+
+#gac-exam-attempt-root .gac-exam-attempt__question {
+  padding: 1.1rem 1.15rem;
+  background: var(--ea-card);
+  border: 1px solid var(--ea-border);
+  border-radius: var(--ea-radius-lg);
+  box-shadow: var(--ea-shadow);
+}
+
+#gac-exam-attempt-root .gac-exam-attempt__questions-list {
+  display: grid;
+  gap: 1rem;
+  padding-bottom: 0.25rem;
+}
+
+#gac-exam-attempt-root .gac-exam-attempt__question--unanswered {
+  border: 2px solid rgba(198, 40, 40, 0.45);
+  box-shadow: 0 8px 26px rgba(198, 40, 40, 0.12);
+}
+
+#gac-exam-attempt-root .gac-exam-attempt__caption {
+  margin: 0.2rem 0;
+  color: var(--ea-muted);
+  font-weight: 600;
+  font-size: 0.88rem;
+}
+
+#gac-exam-attempt-root .gac-exam-attempt__q-title {
+  margin: 0 0 1rem;
+  color: var(--ea-charcoal);
+  font-size: 1.05rem;
+  font-weight: 800;
+  line-height: 1.55;
+}
+
+#gac-exam-attempt-root .gac-exam-attempt__options {
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+}
+
+#gac-exam-attempt-root .gac-exam-attempt__option {
+  width: 100%;
+  text-align: start;
+  border-radius: var(--ea-radius-sm);
+  padding: 0;
+  font: inherit;
+  background: #fff;
+  color: var(--ea-charcoal);
+  border: 1px solid var(--ea-border);
+  cursor: pointer;
+  transition: border-color 0.18s ease, background 0.18s ease, transform 0.12s ease, box-shadow 0.18s ease;
+}
+
+#gac-exam-attempt-root .gac-exam-attempt__option-inner {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  padding: 0.72rem 1rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+#gac-exam-attempt-root .gac-exam-attempt__option-letter {
+  flex-shrink: 0;
+  width: 2.05rem;
+  height: 2.05rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  font-weight: 800;
+  font-size: 0.98rem;
+  color: var(--ea-burgundy);
+  background: rgba(201, 166, 70, 0.12);
+  border: 1px solid rgba(201, 166, 70, 0.32);
+}
+
+#gac-exam-attempt-root .gac-exam-attempt__option-text {
+  flex: 1;
+  text-align: start;
+  line-height: 1.45;
+  font-weight: 600;
+}
+
+#gac-exam-attempt-root .gac-exam-attempt__option:hover {
+  border-color: rgba(201, 166, 70, 0.45);
+  background: #fffdf8;
+  box-shadow: 0 4px 14px rgba(15, 13, 11, 0.06);
+}
+
+#gac-exam-attempt-root .gac-exam-attempt__option:active {
+  transform: scale(0.99);
+}
+
+#gac-exam-attempt-root .gac-exam-attempt__option:focus-visible {
+  outline: none;
+  border-color: rgba(201, 166, 70, 0.65);
+  box-shadow: 0 0 0 4px rgba(201, 166, 70, 0.15);
+}
+
+#gac-exam-attempt-root .gac-exam-attempt__option--selected {
+  border-color: rgba(201, 166, 70, 0.65);
+  background: linear-gradient(105deg, rgba(201, 166, 70, 0.14), rgba(233, 227, 211, 0.55));
+  box-shadow: 0 4px 18px rgba(201, 166, 70, 0.18);
+}
+
+#gac-exam-attempt-root .gac-exam-attempt__option--selected .gac-exam-attempt__option-letter {
+  background: linear-gradient(135deg, var(--ea-gold) 0%, var(--ea-gold-soft) 100%);
+  color: var(--ea-charcoal);
+  border-color: rgba(201, 166, 70, 0.35);
+}
+
+/* Footer nav — block layout so buttons never overlap question cards */
+#gac-exam-attempt-root .gac-exam-attempt__nav {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-top: 1.35rem;
+  padding: 1rem 1.05rem;
+  position: relative;
+  background: var(--ea-card);
+  border: 1px solid var(--ea-border);
+  border-radius: var(--ea-radius-lg);
+  box-shadow: var(--ea-shadow);
+}
+
+#gac-exam-attempt-root .gac-exam-attempt__nav-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+#gac-exam-attempt-root .gac-exam-attempt__hint {
+  margin: 0;
+  padding: 0.6rem 0.85rem;
+  border-radius: var(--ea-radius-sm);
+  background: rgba(201, 166, 70, 0.12);
+  border: 1px solid rgba(201, 166, 70, 0.35);
+  color: var(--ea-burgundy);
+  font-size: 0.92rem;
+  font-weight: 700;
+  text-align: center;
+}
+
+#gac-exam-attempt-root .gac-exam-attempt__btn-primary:disabled {
+  opacity: 0.48;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+#gac-exam-attempt-root .gac-exam-attempt__btn-secondary {
+  border-radius: var(--ea-radius-sm);
+  border: 1px solid var(--ea-border);
+  padding: 0.62rem 1.1rem;
+  font: inherit;
+  font-weight: 800;
+  background: var(--ea-beige);
+  color: var(--ea-charcoal);
+  cursor: pointer;
+  min-width: 7rem;
+  transition: box-shadow 0.15s ease, transform 0.12s ease, border-color 0.15s ease, background 0.15s ease;
+}
+
+#gac-exam-attempt-root .gac-exam-attempt__btn-secondary:hover:not(:disabled) {
+  background: #ded8cc;
+  border-color: rgba(201, 166, 70, 0.4);
+  box-shadow: 0 4px 12px rgba(15, 13, 11, 0.06);
+}
+
+#gac-exam-attempt-root .gac-exam-attempt__btn-secondary:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+#gac-exam-attempt-root .gac-exam-attempt__btn-primary {
+  border-radius: var(--ea-radius-sm);
+  border: 1px solid rgba(201, 166, 70, 0.35);
+  padding: 0.62rem 1.2rem;
+  font: inherit;
+  font-weight: 800;
+  background: linear-gradient(135deg, var(--ea-gold) 0%, var(--ea-gold-soft) 100%);
+  color: var(--ea-charcoal);
+  cursor: pointer;
+  min-width: 7.5rem;
+  box-shadow: 0 6px 20px rgba(201, 166, 70, 0.28);
+  transition: transform 0.12s ease, box-shadow 0.15s ease, filter 0.15s ease;
+}
+
+#gac-exam-attempt-root .gac-exam-attempt__btn-primary:hover:not(:disabled) {
+  box-shadow: 0 8px 24px rgba(201, 166, 70, 0.35);
+  filter: brightness(1.02);
+}
+
+#gac-exam-attempt-root .gac-exam-attempt__btn-primary:active:not(:disabled) {
+  transform: translateY(1px);
+}
+
+#gac-exam-attempt-root .gac-exam-attempt__btn-primary--submit {
+  min-width: 10rem;
+  font-size: 1rem;
+  background: linear-gradient(135deg, var(--ea-burgundy) 0%, #5c1818 100%);
+  color: #fffdf8;
+  border-color: rgba(122, 31, 31, 0.45);
+  box-shadow: 0 6px 22px rgba(122, 31, 31, 0.22);
+}
+
+#gac-exam-attempt-root .gac-exam-attempt__btn-primary--submit:hover:not(:disabled) {
+  box-shadow: 0 8px 26px rgba(122, 31, 31, 0.28);
+  filter: brightness(1.05);
+}
+
+/* Time warning modal */
+#gac-exam-attempt-root .gac-exam-attempt__modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  background: rgba(10, 8, 8, 0.45);
+  backdrop-filter: blur(4px);
+}
+
+#gac-exam-attempt-root .gac-exam-attempt__modal {
+  width: min(26rem, 100%);
+  padding: 1.4rem 1.25rem 1.25rem;
+  border-radius: var(--ea-radius-lg);
+  background: linear-gradient(180deg, #fffdf8 0%, var(--ea-ivory) 100%);
+  border: 1px solid var(--ea-border);
+  box-shadow: 0 20px 50px rgba(10, 8, 8, 0.2);
+  text-align: center;
+}
+
+#gac-exam-attempt-root .gac-exam-attempt__modal-icon {
+  font-size: 2.1rem;
+  line-height: 1;
+  margin-bottom: 0.45rem;
+}
+
+#gac-exam-attempt-root .gac-exam-attempt__modal-title {
+  margin: 0 0 0.6rem;
+  font-size: 1.12rem;
+  font-weight: 800;
+  color: var(--ea-burgundy);
+  line-height: 1.45;
+}
+
+#gac-exam-attempt-root .gac-exam-attempt__modal-lead {
+  margin: 0 0 0.8rem;
+  color: var(--ea-charcoal);
+  font-size: 0.96rem;
+  line-height: 1.5;
+}
+
+#gac-exam-attempt-root .gac-exam-attempt__modal-time {
+  font-variant-numeric: tabular-nums;
+  color: var(--ea-danger);
+  font-size: 1.05rem;
+}
+
+#gac-exam-attempt-root .gac-exam-attempt__modal-list {
+  margin: 0 0 1.05rem;
+  padding: 0 1rem 0 0;
+  text-align: right;
+  list-style: none;
+  color: var(--ea-charcoal);
+  font-size: 0.93rem;
+  line-height: 1.65;
+}
+
+#gac-exam-attempt-root .gac-exam-attempt__modal-list li {
+  position: relative;
+  margin: 0.32rem 0;
+  padding-right: 0.85rem;
+}
+
+#gac-exam-attempt-root .gac-exam-attempt__modal-list li::before {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 0.55em;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--ea-gold);
+}
+
+#gac-exam-attempt-root .gac-exam-attempt__modal-btn {
+  width: 100%;
+  border: 1px solid rgba(201, 166, 70, 0.35);
+  border-radius: var(--ea-radius-sm);
+  padding: 0.72rem 1rem;
+  font: inherit;
+  font-weight: 800;
+  font-size: 0.98rem;
+  color: var(--ea-charcoal);
+  cursor: pointer;
+  background: linear-gradient(135deg, var(--ea-gold) 0%, var(--ea-gold-soft) 100%);
+  box-shadow: 0 6px 20px rgba(201, 166, 70, 0.28);
+}
+
+#gac-exam-attempt-root .gac-exam-attempt__modal-btn:hover {
+  filter: brightness(1.03);
+}
+
+/* Result view — full page cream + large beige shell (design reference) */
+#gac-exam-attempt-root.gac-exam-attempt-root--result {
+  max-width: 56rem;
+  margin: 0 auto;
+  padding: 1.25rem 1rem 2rem;
+  min-height: 70vh;
+  background: var(--ea-ivory);
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+#gac-exam-attempt-root.gac-exam-attempt-root--result .gac-exam-attempt__back {
+  margin-top: 1.25rem;
+  display: block;
+  width: fit-content;
+  margin-inline: auto;
+}
+
+#gac-exam-attempt-root.gac-exam-attempt-root--result .gac-exam-attempt__result-section {
+  color: var(--ea-charcoal);
+  padding: 0;
+  margin: 0;
+}
+
+#gac-exam-attempt-root .gac-exam-attempt__result-shell {
+  background: var(--ea-beige);
+  border-radius: 28px;
+  padding: clamp(1.25rem, 3vw, 1.85rem);
+  border: 1px solid var(--ea-border);
+  box-shadow: 0 16px 40px rgba(15, 13, 11, 0.08);
+}
+
+#gac-exam-attempt-root .gac-exam-attempt__result-title {
+  margin: 0 0 1.25rem;
+  font-size: clamp(1.55rem, 3vw, 2.35rem);
+  color: var(--ea-burgundy);
+  font-weight: 800;
+  line-height: 1.35;
+  text-align: right;
+}
+
+#gac-exam-attempt-root .gac-exam-attempt__result-title-suffix {
+  color: var(--ea-burgundy);
+  font-weight: 800;
+}
+
+#gac-exam-attempt-root .gac-exam-attempt__summary {
+  padding: 1.15rem 1.25rem;
+  background: #fff;
+  border: 1px solid var(--ea-border);
+  border-radius: 18px;
+  margin-bottom: 1.1rem;
+  box-shadow: 0 8px 26px rgba(15, 13, 11, 0.06);
+  text-align: right;
+}
+
+#gac-exam-attempt-root .gac-exam-attempt__summary-line {
+  margin: 0.35rem 0;
+  font-size: 1rem;
+  line-height: 1.55;
+}
+
+#gac-exam-attempt-root .gac-exam-attempt__summary-line strong {
+  color: var(--ea-charcoal);
+  font-weight: 800;
+}
+
+#gac-exam-attempt-root .gac-exam-attempt__qa-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+#gac-exam-attempt-root .gac-exam-attempt__qa {
+  padding: 1.1rem 1.2rem 1.15rem;
+  background: #fff;
+  border: 1px solid var(--ea-border);
+  border-radius: 18px;
+  box-shadow: 0 8px 26px rgba(15, 13, 11, 0.05);
+  text-align: right;
+}
+
+#gac-exam-attempt-root .gac-exam-attempt__qa-line {
+  margin: 0.28rem 0;
+  line-height: 1.55;
+  font-size: 0.96rem;
+}
+
+#gac-exam-attempt-root .gac-exam-attempt__qa-line strong {
+  color: var(--ea-burgundy);
+  font-weight: 800;
+}
+
+#gac-exam-attempt-root .gac-exam-attempt__qa-verdict {
+  margin: 0.65rem 0 0;
+  padding-top: 0.55rem;
+  border-top: 1px solid rgba(201, 166, 70, 0.18);
+  font-weight: 800;
+  font-size: 1rem;
+}
+
+#gac-exam-attempt-root .gac-exam-attempt__qa-verdict--ok {
+  color: var(--ea-green);
+}
+
+#gac-exam-attempt-root .gac-exam-attempt__qa-verdict--bad {
+  color: var(--ea-burgundy);
+}
+
+#gac-exam-attempt-root .gac-exam-attempt__qa-verdict--pending {
+  color: var(--ea-muted);
+}
+
+#gac-exam-attempt-root .gac-exam-attempt__summary-note {
+  margin: 0.75rem 0 0;
+  padding-top: 0.65rem;
+  border-top: 1px dashed rgba(201, 166, 70, 0.35);
+  font-size: 0.94rem;
+  line-height: 1.55;
+  color: var(--ea-muted);
+}
+
+#gac-exam-attempt-root .gac-exam-attempt__qa-explain {
+  margin: 0.45rem 0 0;
+  color: var(--ea-muted);
+  font-size: 0.92rem;
+  line-height: 1.5;
+}
+
+/* Two-column body: in RTL, first flex item sits on the physical RIGHT (sidebar). */
+#gac-exam-attempt-root .gac-exam-attempt__body {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+#gac-exam-attempt-root .gac-exam-attempt__main {
+  flex: 1;
+  min-width: 0;
+}
+
+/* Question map — vertical sidebar on the right (RTL first column) */
+#gac-exam-attempt-root .gac-exam-attempt__qmap {
+  padding: 0.9rem 0.85rem 1rem;
+  background: var(--ea-card);
+  border: 1px solid var(--ea-border);
+  border-radius: var(--ea-radius-md);
+  box-shadow: var(--ea-shadow);
+}
+
+#gac-exam-attempt-root .gac-exam-attempt__qmap--sidebar {
+  flex: 0 0 11.5rem;
+  width: 11.5rem;
+  position: sticky;
+  top: 0.75rem;
+  max-height: calc(100vh - 1.5rem);
+  overflow-y: auto;
+  overscroll-behavior: contain;
+}
+
+#gac-exam-attempt-root .gac-exam-attempt__qmap-head {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 0.55rem;
+  margin-bottom: 0.65rem;
+  padding-bottom: 0.65rem;
+  border-bottom: 1px solid rgba(201, 166, 70, 0.2);
+}
+
+#gac-exam-attempt-root .gac-exam-attempt__qmap-title {
+  margin: 0;
+  font-size: 0.92rem;
+  font-weight: 800;
+  color: var(--ea-charcoal);
+  text-align: right;
+}
+
+#gac-exam-attempt-root .gac-exam-attempt__qmap-legend {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: var(--ea-muted);
+}
+
+#gac-exam-attempt-root .gac-exam-attempt__qmap-legend-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  justify-content: flex-start;
+  flex-direction: row-reverse;
+  text-align: right;
+}
+
+#gac-exam-attempt-root .gac-exam-attempt__qmap-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 999px;
+  flex-shrink: 0;
+}
+
+#gac-exam-attempt-root .gac-exam-attempt__qmap-dot--done {
+  background: #2e7d4a;
+  box-shadow: 0 0 0 2px rgba(46, 125, 74, 0.25);
+}
+
+#gac-exam-attempt-root .gac-exam-attempt__qmap-dot--todo {
+  background: var(--ea-danger);
+  box-shadow: 0 0 0 2px rgba(198, 40, 40, 0.22);
+}
+
+#gac-exam-attempt-root .gac-exam-attempt__qmap-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.38rem;
+}
+
+#gac-exam-attempt-root .gac-exam-attempt__qmap-btn {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  width: 100%;
+  min-height: 2.5rem;
+  padding: 0.4rem 0.55rem;
+  border-radius: 10px;
+  border: 2px solid transparent;
+  font: inherit;
+  font-weight: 800;
+  font-size: 0.88rem;
+  cursor: pointer;
+  text-align: right;
+  transition: transform 0.12s ease, box-shadow 0.15s ease, border-color 0.15s ease, background 0.15s ease;
+}
+
+#gac-exam-attempt-root .gac-exam-attempt__qmap-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 16px rgba(15, 13, 11, 0.1);
+}
+
+#gac-exam-attempt-root .gac-exam-attempt__qmap-btn--done {
+  background: rgba(46, 125, 74, 0.12);
+  border-color: rgba(46, 125, 74, 0.55);
+  color: #1b4d2d;
+}
+
+#gac-exam-attempt-root .gac-exam-attempt__qmap-btn--todo {
+  background: rgba(198, 40, 40, 0.08);
+  border-color: rgba(198, 40, 40, 0.5);
+  color: #8b1c1c;
+}
+
+#gac-exam-attempt-root .gac-exam-attempt__qmap-btn--here {
+  box-shadow: 0 0 0 2px rgba(201, 166, 70, 0.55);
+}
+
+#gac-exam-attempt-root .gac-exam-attempt__qmap-num {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 1.65rem;
+  line-height: 1;
+}
+
+#gac-exam-attempt-root .gac-exam-attempt__qmap-label {
+  font-size: 0.68rem;
+  font-weight: 700;
+  opacity: 0.92;
+  flex: 1;
+  min-width: 0;
+}
+
+@media (max-width: 820px) {
+  #gac-exam-attempt-root .gac-exam-attempt__body {
+    flex-direction: column;
+    gap: 0.85rem;
+  }
+
+  /* Question map first (top) in column layout — easier in DevTools / narrow screens */
+  #gac-exam-attempt-root .gac-exam-attempt__qmap--sidebar {
+    order: 1;
+    position: static;
+    width: 100%;
+    max-height: none;
+    flex: none;
+  }
+
+  #gac-exam-attempt-root .gac-exam-attempt__main {
+    order: 2;
+  }
+
+  #gac-exam-attempt-root .gac-exam-attempt__qmap-list {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  #gac-exam-attempt-root .gac-exam-attempt__qmap-btn {
+    width: auto;
+    min-width: 5.5rem;
+    flex: 1 1 auto;
+  }
+
+  #gac-exam-attempt-root .gac-exam-attempt__qmap-label {
+    display: none;
+  }
+}
+
+#gac-exam-attempt-root .gac-exam-attempt__question[id] {
+  scroll-margin-top: 1rem;
+}

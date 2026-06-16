@@ -1,0 +1,182 @@
+/* Levels & tracks tables: shared admin-theme */
+
+#pg-levels-page-root .pg-levels-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+#pg-levels-page-root .pg-levels-highlight {
+  display: inline-block;
+  padding: 2px 6px;
+  border-radius: 8px;
+  background: rgba(201, 166, 70, 0.18);
+  color: #0f0d0b;
+}
+
+#pg-levels-page-root .pg-levels-datatable-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  min-height: 44px;
+  padding: 10px 22px;
+  margin-inline-end: 8px;
+  font-size: 0.88rem;
+  
+}
+ .adm-edit{
+  background: #c9a646;
+  color: #fffdf8;
+  border: 2px solid #c9a646;
+  border-radius: var(--adm-btn-primary-radius, 9999px);
+  font-weight: 700;
+margin-bottom: 0.5rem;
+ 
+}
+
+.adm-edit:hover {
+  background: #fff;
+  color: #0f0d0b;
+  border: 2px solid #c9a646;
+  box-shadow: none;
+}
+
+
+#pg-levels-page-root .pg-levels-mono {
+  font-family: ui-monospace, "Cascadia Code", monospace;
+  font-size: 0.92em;
+}
+
+/* Outline pill (e.g. «عرض الأسئلة» next to edit/delete on GA parts bank when using pg-levels) */
+#pg-levels-page-root .pg-levels-datatable-btn.adm-outline-questions {
+  background: #fffdf8;
+  color: #0f0d0b;
+  border: 2px solid #c9a646;
+  border-radius: 9999px;
+  font-weight: 600;
+}
+
+#pg-levels-page-root .pg-levels-datatable-btn.adm-outline-questions:hover:not(:disabled) {
+  background: #fff;
+  color: #0f0d0b;
+  border-color: #b8922e;
+}
+
+#pg-levels-page-root .pg-levels-actions-cell {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+}
+
+#pg-levels-page-root .pg-levels-actions-cell .adm-edit {
+  margin-bottom: 0;
+}
+
+/* GA competition bank — question view cards inside «عرض الأسئلة» modal */
+#pg-levels-page-root .ga-q-view-card {
+  background: #fffdf8;
+  border: 1px solid rgba(189, 160, 80, 0.28);
+  border-radius: 22px;
+  padding: 20px 22px;
+  margin: 16px 0;
+  box-shadow: 0 8px 26px rgba(0, 0, 0, 0.06);
+  direction: rtl;
+}
+
+#pg-levels-page-root .ga-q-view-title {
+  margin: 0 0 18px;
+  font-size: 1.12rem;
+  font-weight: 700;
+  color: #0f0d0b;
+  line-height: 1.45;
+}
+
+#pg-levels-page-root .ga-q-view-row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  padding: 14px 18px;
+  margin-bottom: 10px;
+  border-radius: 18px;
+  border: 1px solid rgba(189, 160, 80, 0.38);
+  background: #fff;
+}
+
+#pg-levels-page-root .ga-q-view-row--correct {
+  background: rgba(76, 175, 80, 0.14);
+  border-color: rgba(56, 142, 60, 0.42);
+}
+
+#pg-levels-page-root .ga-q-view-row-text {
+  font-weight: 600;
+  color: #0f0d0b;
+  text-align: right;
+  flex: 1;
+  min-width: 0;
+}
+
+#pg-levels-page-root .ga-q-view-badge {
+  flex-shrink: 0;
+  padding: 7px 16px;
+  border-radius: 999px;
+  background: #2e7d32;
+  color: #fff;
+  font-size: 0.78rem;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+#pg-levels-page-root .ga-q-view-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: flex-start;
+  margin-top: 18px;
+}
+
+#pg-levels-page-root .ga-q-view-tag {
+  padding: 7px 16px;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+#pg-levels-page-root .ga-q-view-tag--easy {
+  background: rgba(76, 175, 80, 0.2);
+  color: #1b5e20;
+}
+
+#pg-levels-page-root .ga-q-view-tag--medium {
+  background: rgba(201, 166, 70, 0.22);
+  color: #5c4510;
+}
+
+#pg-levels-page-root .ga-q-view-tag--hard {
+  background: rgba(183, 28, 28, 0.12);
+  color: #7f1d1d;
+}
+
+#pg-levels-page-root .ga-q-view-tag--muted {
+  background: rgba(201, 166, 70, 0.16);
+  color: #5c4a47;
+}
+
+#pg-levels-page-root .ga-q-view-actions {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 18px;
+}
+
+#pg-levels-page-root .ga-q-view-edit-panel {
+  margin-top: 16px;
+  padding-top: 16px;
+  border-top: 1px dashed rgba(189, 160, 80, 0.45);
+}

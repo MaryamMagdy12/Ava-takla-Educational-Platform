@@ -1,0 +1,306 @@
+/* Create / edit exam: layout + question builder; form controls from admin-theme */
+
+#pg-exam-new-page-root .pg-exam-new-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+#pg-exam-new-page-root .pg-exam-new-form-card-heading {
+  margin: 0 0 16px;
+  color: #0f0d0b;
+  font-size: 1.1rem;
+  font-weight: 800;
+}
+
+#pg-exam-new-page-root .pg-exam-new-form-card-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+
+#pg-exam-new-page-root .pg-exam-new-form-card-actions {
+  margin-top: 18px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+@media (max-width: 900px) {
+  #pg-exam-new-page-root .pg-exam-new-form-card-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+#pg-exam-new-page-root .pg-exam-new-exam-layout {
+  display: grid;
+  grid-template-columns: 1fr 320px;
+  gap: 14px;
+}
+
+#pg-exam-new-page-root .pg-exam-new-exam-main,
+#pg-exam-new-page-root .pg-exam-new-exam-summary {
+  background: linear-gradient(180deg, #fffdf8 0%, #f5f2e7 100%);
+  border: 1px solid rgba(201, 166, 70, 0.22);
+  border-radius: 18px;
+  box-shadow: none;
+  padding: 16px;
+}
+
+#pg-exam-new-page-root .pg-exam-new-exam-title {
+  margin: 0 0 12px;
+  color: #0f0d0b;
+}
+
+#pg-exam-new-page-root .pg-exam-new-exam-question-mode {
+  margin-top: 12px;
+  display: grid;
+  gap: 8px;
+}
+
+#pg-exam-new-page-root .pg-exam-new-exam-question-mode label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+#pg-exam-new-page-root .pg-exam-new-exam-summary h4 {
+  margin: 0 0 10px;
+}
+
+#pg-exam-new-page-root .pg-exam-new-exam-summary p {
+  margin: 0 0 8px;
+  color: #5d5a52;
+}
+
+#pg-exam-new-page-root .pg-exam-new-exam-summary .pg-exam-new-form-card-submit {
+  width: 100%;
+  margin-top: 12px;
+}
+
+@media (max-width: 1024px) {
+  #pg-exam-new-page-root .pg-exam-new-exam-layout {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* GA competition editor — review + bank import (cream / gold) */
+#pg-ga-competition-editor-page-root .ga-comp-existing-root {
+  max-width: 800px;
+}
+
+#pg-ga-competition-editor-page-root .ga-comp-review-hero {
+  background: linear-gradient(165deg, #fffdf9 0%, #f7f2e4 55%, #f0ead8 100%);
+  border: 1px solid rgba(185, 152, 72, 0.35);
+  border-radius: 20px;
+  padding: 22px 22px 18px;
+  box-shadow: 0 10px 28px rgba(62, 48, 20, 0.06);
+  margin-bottom: 18px;
+}
+
+#pg-ga-competition-editor-page-root .ga-comp-review-meta {
+  display: grid;
+  gap: 10px 20px;
+}
+
+#pg-ga-competition-editor-page-root .ga-comp-review-row {
+  display: grid;
+  grid-template-columns: minmax(0, 160px) minmax(0, 1fr);
+  gap: 12px;
+  align-items: baseline;
+  text-align: right;
+  direction: rtl;
+}
+
+@media (max-width: 560px) {
+  #pg-ga-competition-editor-page-root .ga-comp-review-row {
+    grid-template-columns: 1fr;
+    gap: 4px;
+  }
+}
+
+#pg-ga-competition-editor-page-root .ga-comp-review-label {
+  font-size: 0.82rem;
+  color: #7a6f5c;
+  font-weight: 600;
+}
+
+#pg-ga-competition-editor-page-root .ga-comp-review-value {
+  color: #1f1a14;
+  font-size: 0.95rem;
+  line-height: 1.45;
+  word-break: break-word;
+}
+
+#pg-ga-competition-editor-page-root .ga-comp-review-pill {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 999px;
+  background: rgba(201, 166, 70, 0.18);
+  color: #5c4a1e;
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
+#pg-ga-competition-editor-page-root .ga-comp-review-parts-nest {
+  margin-top: 18px;
+  padding: 14px 16px;
+  background: rgba(255, 255, 255, 0.72);
+  border: 1px solid rgba(185, 152, 72, 0.22);
+  border-radius: 14px;
+  direction: rtl;
+  text-align: right;
+}
+
+#pg-ga-competition-editor-page-root .ga-comp-review-parts-title {
+  margin: 0 0 10px;
+  font-size: 0.95rem;
+  font-weight: 800;
+  color: #3d331f;
+}
+
+#pg-ga-competition-editor-page-root .ga-comp-review-parts-ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+#pg-ga-competition-editor-page-root .ga-comp-review-part-li {
+  margin-bottom: 12px;
+  padding-bottom: 10px;
+  border-bottom: 1px dashed rgba(185, 152, 72, 0.28);
+  color: #2a2418;
+}
+
+#pg-ga-competition-editor-page-root .ga-comp-review-part-li:last-child {
+  margin-bottom: 0;
+  padding-bottom: 0;
+  border-bottom: none;
+}
+
+#pg-ga-competition-editor-page-root .ga-comp-review-part-meta {
+  font-weight: 500;
+  color: #6b614e;
+  font-size: 0.9rem;
+}
+
+#pg-ga-competition-editor-page-root .ga-comp-review-rules-ul {
+  margin: 8px 0 0;
+  padding-inline-start: 1.1rem;
+  color: #5d5545;
+  font-size: 0.88rem;
+  line-height: 1.55;
+}
+
+#pg-ga-competition-editor-page-root .ga-comp-toggle-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: flex-end;
+  margin-bottom: 16px;
+  direction: rtl;
+}
+
+#pg-ga-competition-editor-page-root .ga-comp-toggle-btn {
+  appearance: none;
+  cursor: pointer;
+  padding: 10px 20px;
+  border-radius: 12px;
+  border: 2px solid #c9a646;
+  background: transparent;
+  color: #8a6f24;
+  font-weight: 700;
+  font-size: 0.92rem;
+  transition: background 0.15s ease, color 0.15s ease, box-shadow 0.15s ease;
+}
+
+#pg-ga-competition-editor-page-root .ga-comp-toggle-btn:hover {
+  background: rgba(201, 166, 70, 0.12);
+  color: #5c4510;
+}
+
+#pg-ga-competition-editor-page-root .ga-comp-toggle-btn.is-active {
+  background: linear-gradient(180deg, #e8d49a 0%, #d4b45c 100%);
+  color: #2a220f;
+  border-color: #b8922e;
+  box-shadow: 0 4px 14px rgba(140, 110, 40, 0.2);
+}
+
+#pg-ga-competition-editor-page-root .ga-comp-import-box {
+  background: #fffef9;
+  border: 1px solid rgba(185, 152, 72, 0.32);
+  border-radius: 16px;
+  padding: 18px 20px 16px;
+  margin-bottom: 18px;
+  max-width: 640px;
+  margin-inline-start: auto;
+  direction: rtl;
+  text-align: right;
+  box-shadow: 0 6px 20px rgba(62, 48, 20, 0.05);
+}
+
+#pg-ga-competition-editor-page-root .ga-comp-import-heading {
+  margin: 0 0 10px;
+  font-size: 1rem;
+  font-weight: 800;
+  color: #3d331f;
+}
+
+#pg-ga-competition-editor-page-root .ga-comp-bank-checklist {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 12px;
+  max-height: 280px;
+  overflow: auto;
+  padding: 4px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.85);
+  border: 1px solid rgba(185, 152, 72, 0.2);
+}
+
+#pg-ga-competition-editor-page-root .ga-comp-bank-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 12px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.12s ease;
+}
+
+#pg-ga-competition-editor-page-root .ga-comp-bank-item:hover:not(.is-locked) {
+  background: rgba(201, 166, 70, 0.1);
+}
+
+#pg-ga-competition-editor-page-root .ga-comp-bank-item.is-locked {
+  opacity: 0.85;
+  cursor: default;
+}
+
+#pg-ga-competition-editor-page-root .ga-comp-bank-item-text {
+  flex: 1;
+  font-weight: 600;
+  color: #2a2418;
+}
+
+#pg-ga-competition-editor-page-root .ga-comp-bank-badge {
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 3px 8px;
+  border-radius: 6px;
+  background: rgba(120, 100, 60, 0.12);
+  color: #5c4f32;
+}
+
+#pg-ga-competition-editor-page-root .ga-comp-import-box .adm-btn-primary {
+  background: linear-gradient(180deg, #e8d49a 0%, #c9a646 100%);
+  border: 1px solid #a88930;
+  color: #1f1a0f;
+  font-weight: 800;
+}
+
+#pg-ga-competition-editor-page-root .ga-comp-import-box .adm-btn-primary:hover {
+  filter: brightness(1.03);
+}

@@ -1,0 +1,61 @@
+#pg-notfound-root {
+  --pg-notfound-text: #0a0808;
+  --pg-notfound-muted: rgba(144, 40, 33, 0.72);
+  --pg-notfound-card: #ffffff;
+  --pg-notfound-border: rgba(201, 120, 55, 0.35);
+  --pg-notfound-brand: #c97837;
+  --pg-notfound-brand-dark: #902821;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 1rem;
+  color: var(--pg-notfound-text);
+  font-family: 'Cairo', sans-serif;
+  background:
+    radial-gradient(circle at 50% 35%, rgba(201, 120, 55, 0.22), transparent 50%),
+    radial-gradient(ellipse 100% 60% at 100% 100%, rgba(144, 40, 33, 0.1), transparent 50%),
+    linear-gradient(168deg, #eaefdb 0%, #f8faf0 100%);
+  background-attachment: fixed;
+}
+
+#pg-notfound-root .pg-notfound__card {
+  width: min(440px, 100%);
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+  background: var(--pg-notfound-card);
+  border: 1px solid var(--pg-notfound-border);
+  border-radius: 22px;
+  text-align: center;
+  box-shadow:
+    0 20px 50px rgba(144, 40, 33, 0.09),
+    0 0 0 1px rgba(255, 255, 255, 0.85) inset;
+}
+
+#pg-notfound-root .pg-notfound__title {
+  margin: 0.4rem 0;
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  color: #902821;
+}
+
+#pg-notfound-root .pg-notfound__hint {
+  margin: 0.2rem 0;
+  color: var(--pg-notfound-muted);
+  line-height: 1.45;
+}
+
+#pg-notfound-root .pg-notfound__link {
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  padding: 0.7rem 1rem;
+  margin-top: 0.35rem;
+  background: linear-gradient(120deg, var(--pg-notfound-brand-dark), var(--pg-notfound-brand));
+  color: #eaefdb;
+  font-weight: 700;
+  border: none;
+  box-shadow: 0 8px 26px rgba(201, 120, 55, 0.35);
+}

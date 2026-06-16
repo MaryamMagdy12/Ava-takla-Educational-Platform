@@ -1,0 +1,60 @@
+.gac-home-top-nav {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.45rem 0.65rem;
+  margin-bottom: 1.1rem;
+}
+
+.gac-home-top-nav__label {
+  font-weight: 800;
+  font-size: 0.82rem;
+  color: #c97837;
+  padding: 0.25rem 0.55rem;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.75);
+  border: 1px solid rgba(201, 120, 55, 0.3);
+}
+
+.gac-home-top-nav__link {
+  font-weight: 700;
+  font-size: 0.88rem;
+  text-decoration: none;
+  color: #902821;
+  padding: 0.3rem 0.6rem;
+  border-radius: 999px;
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+.gac-home-top-nav__link:hover {
+  background: rgba(201, 120, 55, 0.16);
+  transform: translateY(-1px);
+}
+
+.gac-home-top-nav__link--on {
+  background: rgba(144, 40, 33, 0.1);
+  border: 1px solid rgba(201, 120, 55, 0.35);
+}
+
+@media (max-width: 560px) {
+  .gac-home-top-nav {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.5rem;
+  }
+
+  .gac-home-top-nav__label {
+    text-align: center;
+  }
+
+  .gac-home-top-nav__link {
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    box-sizing: border-box;
+  }
+}

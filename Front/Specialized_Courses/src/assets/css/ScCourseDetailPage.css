@@ -1,0 +1,175 @@
+#sc-page-detail-root.sc-page-detail {
+  min-height: 0;
+  padding: 0;
+  background: transparent;
+}
+
+#sc-page-detail-root .sc-page-detail__inner {
+  width: 100%;
+  max-width: none;
+  margin-inline: 0;
+}
+
+#sc-page-detail-root .sc-page-detail__exams {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+
+#sc-page-detail-root .sc-page-detail__resource-block {
+  margin-top: 1.25rem;
+}
+
+#sc-page-detail-root .sc-page-detail__resource-list {
+  margin: 0.5rem 0 0;
+  padding: 0 1.1rem 0 0;
+  list-style: disc;
+  color: #3a2a24;
+  line-height: 1.65;
+}
+
+.sc-course-tabs {
+  display: flex;
+  gap: 0.5rem;
+  margin: 1.25rem 0 0.85rem;
+  padding: 0.35rem;
+  border-radius: 16px;
+  background: rgba(255, 253, 248, 0.9);
+  border: 1px solid rgba(201, 166, 70, 0.22);
+}
+
+.sc-course-tabs__btn {
+  flex: 1;
+  border: none;
+  border-radius: 12px;
+  padding: 0.55rem 0.75rem;
+  font: inherit;
+  font-weight: 800;
+  font-size: 0.9rem;
+  cursor: pointer;
+  color: rgba(15, 13, 11, 0.55);
+  background: transparent;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.sc-course-tabs__btn--active {
+  background: linear-gradient(135deg, #c9a646 0%, #e4c86d 100%);
+  color: #0f0d0b;
+  box-shadow: 0 6px 16px rgba(201, 166, 70, 0.22);
+}
+
+.sc-course-tabs__panel {
+  min-height: 120px;
+}
+
+.sc-course-tabs__empty {
+  margin: 0.75rem 0 0;
+  padding: 1.25rem 1rem;
+  text-align: center;
+  color: rgba(15, 13, 11, 0.52);
+  font-weight: 600;
+  border: 1px dashed rgba(201, 166, 70, 0.35);
+  border-radius: 16px;
+  background: rgba(255, 253, 248, 0.65);
+}
+
+#sc-page-detail-root .sc-page-detail__resource-list--cards {
+  list-style: none;
+  padding: 0;
+  margin: 0.75rem 0 0;
+  display: grid;
+  gap: 0.65rem;
+}
+
+.sc-course-resource-card {
+  border-radius: 14px;
+  border: 1px solid rgba(201, 166, 70, 0.22);
+  background: linear-gradient(180deg, #fffdf8 0%, #f5f2e7 100%);
+  padding: 0.85rem 1rem;
+  box-shadow: 0 6px 18px rgba(15, 13, 11, 0.05);
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+}
+
+.sc-course-resource-card__head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 0.65rem;
+  flex-wrap: wrap;
+}
+
+.sc-course-resource-card__badge {
+  flex-shrink: 0;
+  font-size: 0.72rem;
+  font-weight: 800;
+  padding: 0.2rem 0.5rem;
+  border-radius: 999px;
+  background: rgba(201, 166, 70, 0.18);
+  color: #5a1515;
+  border: 1px solid rgba(201, 166, 70, 0.35);
+}
+
+.sc-course-resource-card__title {
+  flex: 1;
+  min-width: 0;
+  margin: 0;
+  font-weight: 800;
+  color: #0f0d0b;
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+.sc-course-resource-card__meta {
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: #7a1f1f;
+}
+
+.sc-page-detail__exam-hint {
+  margin: 1.35rem 0 0;
+  font-size: 0.88rem;
+  color: rgba(15, 13, 11, 0.58);
+  font-weight: 600;
+  line-height: 1.55;
+}
+
+.sc-page-detail__exam-link {
+  color: #c9a646;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.sc-page-detail__exam-link:hover {
+  text-decoration: underline;
+}
+
+/* —— Lectures list (card layout) —— */
+.sc-lectures-section {
+  margin-top: 0.25rem;
+}
+
+.sc-lectures-section__heading {
+  margin: 0 0 1.05rem;
+  font-size: clamp(1.12rem, 2.1vw, 1.42rem);
+  font-weight: 800;
+  color: #0f0d0b;
+  text-align: right;
+  line-height: 1.35;
+}
+
+.sc-lectures-section__grid {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 1.15rem;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 280px), 1fr));
+}
+
+.sc-lectures-section__cell {
+  margin: 0;
+  padding: 0;
+}
+

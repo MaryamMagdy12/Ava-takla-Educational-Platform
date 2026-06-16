@@ -1,0 +1,174 @@
+#pg-login-viewport {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  width: 100%;
+  padding: 24px;
+  font-family: "Cairo", sans-serif;
+  /* background: linear-gradient(180deg, #0f0d0b 0%, #251714 45%, #7a1f1f 100%); */
+  background-image: url('../images/ChatGPT Image Apr 16, 2026, 11_42_30 PM (2).png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #f5f2e7;
+  overflow-x: hidden;
+  max-width: 100%;
+}
+
+#pg-login-viewport > * {
+  max-width: 100%;
+}
+
+#pg-login-viewport .pg-login-brand-block {
+  width: min(420px, 100%);
+  text-align: center;
+  margin-bottom: 18px;
+}
+
+#pg-login-viewport .pg-login-brand-logo {
+  width: 104px;
+  height: 104px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 50%;
+  display: block;
+  margin: 0 auto 12px;
+  border: 2px solid rgba(201, 166, 70, 0.52);
+  background-color: #f5f2e7;
+  box-shadow: none;
+}
+
+#pg-login-viewport .pg-login-brand-title {
+  margin: 0;
+  font-size: clamp(1.05rem, 2.2vw, 1.3rem);
+  font-weight: 800;
+  color: #f5f2e7;
+  letter-spacing: -0.02em;
+  line-height: 1.35;
+  overflow-wrap: anywhere;
+}
+
+#pg-login-viewport .pg-login-brand-tagline {
+  margin: 8px 0 0;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #c9a646;
+}
+
+#pg-login-viewport .pg-login-brand-description {
+  margin: 8px 0 0;
+  color: rgba(245, 242, 231, 0.78);
+  line-height: 1.6;
+  font-size: 0.96rem;
+}
+
+#pg-login-viewport .pg-login-login-card {
+  width: min(420px, 100%);
+  max-width: 100%;
+  background: linear-gradient(180deg, #fffdf8 0%, #f5f2e7 100%);
+  border: 1px solid rgba(201, 166, 70, 0.22);
+  border-radius: 24px;
+  padding: 32px;
+  box-shadow: none;
+}
+
+#pg-login-viewport .pg-login-login-title {
+  margin: 0;
+  font-size: 1.65rem;
+  font-weight: 800;
+  color: #0f0d0b;
+  letter-spacing: -0.02em;
+}
+
+#pg-login-viewport .pg-login-login-lead {
+  color: #5c5348;
+  margin: 10px 0 22px;
+  font-size: 0.98rem;
+}
+
+#pg-login-viewport .pg-login-login-error {
+  margin: 0 0 12px;
+  padding: 10px 12px;
+  border-radius: 12px;
+  background: rgba(144, 40, 33, 0.12);
+  color: #6b1f1a;
+  font-size: 0.9rem;
+}
+
+#pg-login-viewport .pg-login-login-input {
+  width: 100%;
+  margin-top: 12px;
+  border-radius: 14px;
+  border: 1px solid rgba(201, 166, 70, 0.28);
+  background: #fffdf8;
+  color: #c9a646;
+  font-weight: 600;
+  padding: 12px 14px;
+  box-shadow: none;
+}
+
+#pg-login-viewport .pg-login-login-input:focus {
+  outline: none;
+  border-color: rgba(201, 166, 70, 0.65);
+  box-shadow: none;
+  outline: 2px solid rgba(201, 166, 70, 0.35);
+  outline-offset: 2px;
+}
+
+#pg-login-viewport .pg-login-login-submit {
+  width: 100%;
+  margin-top: 16px;
+  border-radius: var(--adm-btn-primary-radius, 9999px);
+  border: none;
+  background: var(--adm-btn-primary-bg, #c9a646);
+  color: #f5f2e7;
+  font-weight: 700;
+  cursor: pointer;
+  padding: 14px 28px;
+  font-size: 1rem;
+  box-shadow: none;
+  transition: transform 0.15s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+}
+
+#pg-login-viewport .pg-login-login-submit:hover:not(:disabled) {
+  transform: translateY(-1px);
+  background: #f5f2e7;
+  color: #c9a646;
+  border: 2px solid #c9a646;
+  filter: none;
+  box-shadow: none;
+}
+
+#pg-login-viewport .pg-login-login-submit:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+  transform: none;
+}
+
+@media (max-width: 768px) {
+  #pg-login-viewport {
+    padding: 18px 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  #pg-login-viewport {
+    padding: 14px 10px;
+    background-position: center top;
+  }
+
+  #pg-login-viewport .pg-login-login-card {
+    padding: 22px 16px;
+    border-radius: 18px;
+  }
+
+  #pg-login-viewport .pg-login-brand-logo {
+    width: 88px;
+    height: 88px;
+  }
+
+  #pg-login-viewport .pg-login-brand-title {
+    font-size: 1rem;
+    line-height: 1.45;
+  }
+}

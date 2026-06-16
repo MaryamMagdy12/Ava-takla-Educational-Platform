@@ -1,0 +1,118 @@
+.dlg-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1300;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background: rgba(10, 8, 8, 0.5);
+  backdrop-filter: blur(4px);
+}
+
+.dlg-card {
+  width: min(460px, 100%);
+  background: linear-gradient(180deg, #fffdf8 0%, #f5f2e7 100%);
+  border: 1px solid rgba(201, 166, 70, 0.35);
+  border-radius: 24px;
+  box-shadow: none;
+  padding: 22px 22px 18px;
+}
+
+.dlg-title {
+  margin: 0 0 10px;
+  color: #0f0d0b;
+  font-size: 1.2rem;
+  font-weight: 800;
+}
+
+.dlg-message {
+  margin: 0;
+  color: #2a2624;
+  line-height: 1.7;
+  white-space: pre-line;
+}
+
+.dlg-password-field {
+  margin-top: 14px;
+}
+
+.dlg-password-label {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: #0f0d0b;
+}
+
+.dlg-password-input {
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid rgba(201, 166, 70, 0.45);
+  border-radius: 12px;
+  padding: 11px 14px;
+  font: inherit;
+  background: #fff;
+  color: #0f0d0b;
+}
+
+.dlg-password-input:focus {
+  outline: 2px solid rgba(201, 166, 70, 0.35);
+  outline-offset: 2px;
+  border-color: rgba(201, 166, 70, 0.7);
+}
+
+.dlg-password-error {
+  margin: 8px 0 0;
+  color: #7a1f1f;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.dlg-actions {
+  margin-top: 18px;
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.dlg-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--adm-btn-primary-radius, 9999px);
+  padding: 12px 28px;
+  min-height: 48px;
+  font-weight: 700;
+  color: var(--adm-btn-primary-ink, #0f0d0b);
+  background: var(--adm-btn-primary-bg, #c9a646);
+  border: none;
+  box-shadow: none;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+}
+
+.dlg-btn:hover:not(.dlg-btn--ghost) {
+  transform: translateY(-1px);
+  background: var(--adm-btn-primary-bg-hover, #dfc062);
+  filter: none;
+  box-shadow: none;
+}
+
+.dlg-btn--ghost {
+  color: var(--adm-ink, #0f0d0b);
+  background: var(--adm-btn-secondary-fill, transparent);
+  border: 1px solid var(--adm-btn-secondary-border, #c9a646);
+  min-height: 46px;
+  padding: 11px 26px;
+  box-shadow: none;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease, background-color 0.2s ease;
+}
+
+.dlg-btn--ghost:hover {
+  transform: translateY(-1px);
+  filter: none;
+  background: var(--adm-btn-secondary-fill-hover, rgba(201, 166, 70, 0.32));
+  border-color: #a88a34;
+  box-shadow: none;
+}

@@ -1,0 +1,121 @@
+#portal-page-root.portal-page {
+  --portal-bg: #f5f0e6;
+  --portal-burgundy: #5c2121;
+  --portal-gold: #d4af37;
+  min-height: 100%;
+  min-height: 100dvh;
+  padding: clamp(1.35rem, 3.5vw, 2.25rem) clamp(0.85rem, 3vw, 1.75rem) clamp(2.5rem, 5vw, 3.5rem);
+  padding-bottom: max(clamp(2.5rem, 5vw, 3.5rem), env(safe-area-inset-bottom, 0px));
+  background-color: var(--portal-bg);
+  background-image: repeating-linear-gradient(
+    -18deg,
+    transparent,
+    transparent 11px,
+    rgba(92, 33, 33, 0.018) 11px,
+    rgba(92, 33, 33, 0.018) 12px
+  );
+  position: relative;
+  overflow-x: clip;
+}
+
+#portal-page-root .portal-page__backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+#portal-page-root .portal-page__backdrop-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  transform: scale(1.02);
+}
+
+#portal-page-root .portal-page__backdrop-scrim {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(245, 240, 230, 0.08) 0%,
+    rgba(245, 240, 230, 0.35) 28%,
+    rgba(245, 240, 230, 0.72) 62%,
+    rgba(245, 240, 230, 0.94) 100%
+  );
+}
+
+#portal-page-root .portal-page__backdrop-vignette {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse 85% 70% at 50% 45%, transparent 35%, rgba(92, 33, 33, 0.06) 100%);
+  mix-blend-mode: multiply;
+  opacity: 0.85;
+}
+
+#portal-page-root .portal-page__shell {
+  position: relative;
+  z-index: 1;
+  max-width: min(1180px, 100%);
+  margin-inline: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#portal-page-root .portal-page__grid {
+  width: 100%;
+  display: grid;
+  gap: clamp(1rem, 2.2vw, 1.35rem);
+  grid-template-columns: repeat(3, minmax(min(100%, 240px), 1fr));
+  align-items: stretch;
+  margin-top: 0.15rem;
+}
+
+#portal-page-root .portal-page__grid > * {
+  min-width: 0;
+}
+
+@media (max-width: 900px) {
+  #portal-page-root .portal-page__grid {
+    grid-template-columns: 1fr;
+    width: min(100%, 420px);
+    max-width: none;
+    margin-inline: auto;
+  }
+
+  #portal-page-root .portal-page__backdrop-img {
+    object-position: center 15%;
+  }
+}
+
+@media (max-width: 640px) {
+  #portal-page-root.portal-page {
+    padding: clamp(1rem, 4vw, 1.35rem) clamp(0.65rem, 3.5vw, 1rem) clamp(2rem, 6vw, 2.75rem);
+    padding-bottom: max(clamp(2rem, 6vw, 2.75rem), env(safe-area-inset-bottom, 0px));
+  }
+
+  #portal-page-root .portal-page__shell,
+  #portal-page-root .portal-page__grid {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  #portal-page-root .portal-page__backdrop-scrim {
+    background: linear-gradient(
+      180deg,
+      rgba(245, 240, 230, 0.2) 0%,
+      rgba(245, 240, 230, 0.55) 35%,
+      rgba(245, 240, 230, 0.9) 100%
+    );
+  }
+}
+
+@media (max-width: 380px) {
+  #portal-page-root.portal-page {
+    padding-inline: 0.5rem;
+  }
+}
